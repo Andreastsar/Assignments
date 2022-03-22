@@ -24,19 +24,42 @@
 
       <section id="form">
             <h1>Contact Us</h1>
-            <form action="">
+            <form action="" method="GET">
+                  <!--Creating fieldsets-->
                   <fieldset>
                         <legend>Personal Data</legend>
                         <label for="first-name">First Name</label> <br />
-                        <input type="text" id="first-name" name="first-name" placeholder="ex. John"> <br />
+                        <input type="text" id="first-name" name="first-name" placeholder="i.e. John"> <br />
                         <label for="last-name">Last Name</label> <br />
-                        <input type="text" id="last-name" name="last-name" placeholder="ex. Bezos"> <br />
-                        <label for="message">Message:</label> <br/>
-                        <textarea name="message" id="message" cols="30" rows="10">Write a message</textarea> <br/>
+                        <input type="text" id="last-name" name="last-name" placeholder="i.e. Bezos"> <br />
+                        <label for="message">Message:</label> <br />
+                        <textarea name="message" id="message" cols="30" rows="10">Write a message</textarea> <br />
                   </fieldset>
                   <fieldset>
-                        
+                        <legend>Travel Information</legend>
+                        <label for="gender">Gender :</label>
+                        <input type="radio" name="gender" id="male" value="male">
+                        <label for="male">Male</label>
+                        <input type="radio" name="gender" id="female" value="female">
+                        <label for="female">Female</label> <br />
+
+                        <label for="destination">Select a Destination</label>
+                        <!--Dropdown select menu-->
+                        <select name="destination" id="destination">
+                              <option value="maldives">Maldives Islands</option>
+                              <option value="carribean">Carribean Sea</option>
+                              <option value="myconos">Myconos Island</option>
+                        </select>
+                        <br />
+                        <label for="activity">Check Activities</label>
+                        <input type="checkbox" name="fishing" id="fishing">
+                        <label for="fishing">Fishing</label>
+                        <input type="checkbox" name="diving" id="diving">
+                        <label for="diving">Diving</label>
                   </fieldset>
+                  <!--Submit & Reset buttons-->
+                  <input type="submit" value="Submit">
+                  <input type="reset" value="Reset">
             </form>
       </section>
 
