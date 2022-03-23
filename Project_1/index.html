@@ -81,13 +81,11 @@
       <br />
       <table border="2" style="width: 200px; height: 200px; text-align: center; background-color: aquamarine;">
             <caption>Corporations</caption>
-            <th>
-                  <tr>
-                        <th>Apple</th>
-                        <th>Microsoft</th>
-                        <th>Google</th>
-                  </tr>
-            </th>
+            <tr>
+                  <th>Apple</th>
+                  <th>Microsoft</th>
+                  <th>Google</th>
+            </tr>
             <tr>
                   <td>2</td>
                   <td>4</td>
@@ -138,7 +136,7 @@
                   <td colspan="4">O</td>
             </tr>
       </table>
-                                                            <!-- <table> Attributes
+      <!-- <table> Attributes
                                                             cellspacing:
                                                             Set the space between the cells in pixels (table tag)
                                                             cellpadding:
@@ -146,6 +144,61 @@
                                                             bgcolor:
                                                             background color (all tags) -->
       <hr />
+      <p><b>Forms</b></p>
+      <form action="" method="GET">
+            <!--Creating fieldsets-->
+            <fieldset>
+                  <legend>Personal Data</legend>
+                  <label for="first-name">First Name</label> <br />
+                  <input type="text" id="first-name" name="first-name" placeholder="i.e. John"> <br />
+                  <label for="last-name">Last Name</label> <br />
+                  <input type="text" id="last-name" name="last-name" placeholder="i.e. Bezos"> <br />
+                  <label for="message">Message:</label> <br />
+                  <textarea name="message" id="message" cols="30" rows="10">Write a message</textarea> <br />
+            </fieldset>
+            <fieldset>
+                  <legend>Travel Information</legend>
+                  <label for="gender">Gender :</label>
+                  <input type="radio" name="gender" id="male" value="male">
+                  <label for="male">Male</label>
+                  <input type="radio" name="gender" id="female" value="female">
+                  <label for="female">Female</label> <br />
+
+                  <label for="destination">Select a Destination</label>
+                  <!--Dropdown select menu-->
+                  <select name="destination" id="destination">
+                        <option value="maldives">Maldives Islands</option>
+                        <option value="carribean">Carribean Sea</option>
+                        <option value="myconos">Myconos Island</option>
+                  </select>
+                  <br />
+                  <label for="activity">Check Activities</label>
+                  <input type="checkbox" name="fishing" id="fishing">
+                  <label for="fishing">Fishing</label>
+                  <input type="checkbox" name="diving" id="diving">
+                  <label for="diving">Diving</label>
+            </fieldset>
+            <fieldset>
+                  <legend>Gifts</legend>
+                  <p><b>Select your gift!</b></p>
+                  <select name="games">
+                        <optgroup label="Pc games">
+                              <option value="callofduty">Call of Duty</option>
+                              <option value="ageofempires">Age of Empires</option>
+                              <option value="godofwar">God Of War</option>
+                        </optgroup>
+                        <optgroup label="PS5 Games">
+                              <option value="godofwar2">God Of War 2</option>
+                              <option value="crash">Crash Bandicoot</option>
+                        </optgroup>
+                  </select>
+            </fieldset>
+            <!--Submit & Reset buttons-->
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+      </form>
+      <hr/>
+
 </body>
 
 </html>
