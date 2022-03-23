@@ -7,6 +7,9 @@ header {
       font-size: 40px;
       font-weight: 800;
       color: #0720af;
+      padding: 8px;
+      border-bottom: 2px solid #e2eaef;
+      border-top: 2px solid #e2eaef;
 }
 
 nav {
@@ -24,7 +27,68 @@ nav > a {
       padding: 14px 16px;
       }
 
+footer {
+      clear: both;
+      text-align: center;
+      font-size: 15px;
+      background-color: #ccc;
+      padding: 8px;
+      border-bottom: 2px solid #e2eaef;
+      border-top: 2px solid #e2eaef;
+}
+
 .description {
       font-weight: 600;
       font-size: 1.5em;
+}
+
+nav > a:hover {
+      background-color: #ddd;
+      color: black;
+}
+
+.active {
+      color: white;
+      background-color: #0040ff;
+}
+
+/*Styling the Form*/
+
+fieldset {
+      border-radius: 5px;
+      background-color: #668cff;
+      padding: 20px;
+}
+
+input[type=text], select {
+      width: 80%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 2px solid #668cff;
+      cursor: pointer;
+      font-size: 22px;
+}
+
+legend {
+      font-size: 1.5em;
+      font-weight: bold;
+      background-color: #eee;
+      border: 2px solid black;
+      color: black;
+      padding: 4px 8px;
+      text-shadow: black;
+}
+
+input[type=submit], [type=reset] {
+      width: 20%;
+      padding: 14px 20px;
+      background-color: #0040ff;
+      border-radius: 5px;
+      color: white;
+      margin: 8px 0;
+      border: none;
+      border-bottom: 6px;
+      cursor: pointer;
+      font-size: 18px;
 }
