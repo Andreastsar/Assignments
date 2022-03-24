@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>JS Ex3 - By Reference / By Type</title>
+</head>
+
+<body>
+      <h1>Ex 4 - Primitive & By Reference Data Types v1</h1>
+      <p>In JavaScript there are six primitive data types: Number, Primitive,
+            Boolean, Null, Symbol and Undefined. They are called <em>Primitive</em>
+            because they cannot be reduced in more fundamental building blocks.
+      </p>
+      <p>The <em>Reference</em> data types are composite types because they
+            can contain both primitive and other composite types. Composite types
+            build on a fundamental building-block type in JavaScript called
+            <em>Object</em>, a flexible collection of diverse types with any
+            number of different members.
+      </p>
+      <p>The basic data types fall into 2 groups based on the way they store
+            their information:
+      </p>
+      <ul>
+            <li>Primitive Types - Their value is stored directly into a
+                  memory location assigned for that identifier.</li>
+            <li>Reference Types - A Reference to a memory location containing
+                  the data for the object is assigned to the identifier.</li>
+      </ul>
+      <img src="./img/data-types.jpg" alt="Data Types">
+      <hr />
+
+      <script>
+            var number1 = 10;
+            var number2 = number1;
+            document.write(`Copying Primitive Data types by Value<br/>`);    // Copying by value
+            document.write(`${number1}<br/>`);
+            document.write(`${number2}<br/>`);
+
+            const arr1 = [
+                  ["Jaco Pastorius", 60, true],
+                  ["Stanley Clarke", 72, false],
+                  ["Marcus Miller", 58, true]
+            ];
+
+            const arr2 = arr1;
+            document.write(`Return to Forever original bassist: ${arr2[1][0]}<br/>`);
+            console.table(arr2);
+      </script>
+</body>
+
+</html>
