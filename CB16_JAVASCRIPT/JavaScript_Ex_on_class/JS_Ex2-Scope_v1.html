@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>JS Ex 2 - Scope v1</title>
+</head>
+
+<body>
+      <h1>JavaScript Ex2 - Variable Scope_v1</h1>
+      <p>
+            In general when the scope of the variable in JavaScript refers to the portions of the program where it
+            can be directly accessed. Before ES^ (2015) edition variables intriduced with the <code>var</code>
+            keyword had only <strong>Global Scope</strong> and <strong>Function Scope.</strong>
+      </p>
+      <p>
+            As we will see in the next exercise JavaScript ES6 introduced <strong>Block Scope.</strong>Variables
+            declared inside a { } block cannot be aqccessed from outside the block. Variables declared with the
+            <code>var</code> keyword cannot have block scope.
+      </p>
+
+      <script>
+            var a = "item";  // var a here is global
+            var b = "item";
+            var c = "item";
+
+            function aFunc() {
+                  var a = "book";  //var a here is local
+                  document.write(a + "<br/>");
+            }
+
+            aFunc();
+            document.write(a + "<br/>");
+            document.write("<hr/>");
+
+            function bFunc() {
+                  b = "book";  // When var is not used, then you declare a new value for var b - Declared GLOBALLY without var
+                  document.write(b + "<br/>");
+            }
+
+            bFunc();
+            document.write(b + "<br/>");
+            document.write("<hr/>");
+
+            function cFunc() {
+                  let c = "book";
+                  document.write(c + "<br/>");
+            }
+
+            cFunc();
+            document.write(c + "<br/>");
+            document.write("<hr/>");
+
+
+
+      </script>
+</body>
+
+</html>

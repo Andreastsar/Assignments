@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>JS Ex 1</title>
+</head>
+
+<body>
+      <h1>Level I - Ex 3 - Data Type Conversion</h1>
+      <p>JavaScript is a loose type language, so it allows us to modify
+            variables in flexible ways. It converts automatically data types which
+            which makes variable comparison a lot easier.
+      </p>
+      <p>When JavaScript performs implicit conversions, the original variable is not
+            modified. The conversion happens only for that specific conversion.
+      </p>
+      <p>If we have numeric operations the Boolean type is converted to number
+            (1 - true) and (0 - false). In all cases involving Booleans and Strings,
+            both values will be treated as Strings.
+      </p>
+      <h2>Type Casting</h2>
+      <p>
+            Often we cannot rely on JavaScript to perform the right type coercion when
+            working with different kind of data types. There are methods of <em>Object</em>
+            object that can help us with casting:
+      </p>
+      <ul>
+            <li><code>parseInt(val)</code> - Strings are forced to function as integer
+                  numbers. For example <code>parseInt("2.35") == 2</code></li>
+            <li><code>parseFloat(val)</code> - The same as before except that the
+                  value remains a float number with the decimal points. For example
+                  <code>parseFloat("2.35") == 2.35</code>
+            </li>
+            <li><code>Object.toString()</code> - All objects descending from object
+                  inherit this method so they can be treated as Strings.</li>
+      </ul>
+      <hr />
+
+      <script>
+            var number = "1";
+            var result1 = number - 1;
+            var result2 = +number + 1; //Beware the duality of the (+) operator
+            var result3 = number * 100;
+            var result4 = 1 + true;
+            var result5 = parseInt(number) + 1;
+
+            document.write("Variable result1 = " + result1 + "<br/>");
+            document.write("Variable result2 = " + result2 + "<br/>");
+            document.write("Variable result3 = " + result3 + "<br/>");
+            document.write("Variable result4 = " + result4 + "<br/>");
+            document.write("Variable result5 = " + result5 + "<br/>");
+
+
+      </script>
+</body>
+
+</html>

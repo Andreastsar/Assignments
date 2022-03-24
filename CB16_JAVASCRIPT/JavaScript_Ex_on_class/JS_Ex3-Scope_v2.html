@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>JS Ex 2 - Scope v2</title>
+</head>
+
+<body>
+      <p>
+            The <code>let</code> keyword for declaring variables was introduced in Javascript ES6. Variables declared
+            inside curly braces ({ }) with 'let' can have block scope and cannot be accessed from outside this block.
+            As we already mentioned varables declared with the <code>var</code> keyword can not have block scope, thus
+            they can be accessed from outside the block. Redeclaring a variable using <code>var</code> can lead to
+            problems
+            because if the variable is inside a block, the variable will be redeclared and outside of this block. We can
+            solve
+            this problem using the <code>let</code> keyword.
+      </p>
+      <h2>The <code>const</code> Keyword</h2>
+      <p>
+            Variables defined with <code>const</code> cannot be redeclared and reassigned. They also have block scope.
+            JavaScript <code>const</code> variables must be assigned a value when they are declared. As a general rule,
+            always declare variables with <code>const</code> unless you know that the value will change.
+      </p>
+      <p>We very often use <code>const</code> when we want to declare:</p>
+      <p>
+      <ul>
+            <li>A new Array</li>
+            <li>A new Object</li>
+            <li>A new Function</li>
+            <li>A new RegExp</li>
+      </ul>
+      </p>
+      <p><em>NOTE:The keyword <code>const</code> does not exactly defines a constant value, but a constant reference
+                  to a value. As a result we can change a constant array and an object defined with <code>const</code>.
+                  However we cannot reassigned the array.
+                  </code></em></p>
+      <hr />
+
+      <script>
+            var lang = "JavaScript";
+            document.write("var lang = " + lang + "<br/>");
+
+            if (lang) {
+                  var lang = "React.js";
+                  document.write("var lang = " + lang + "<br/>");
+            }
+
+            document.write("var lang = " + lang + "<br/>");
+            document.write("<hr/>");
+
+            var lang = "JavaScript";
+            document.write("var lang = " + lang + "<br/>");
+
+            if (lang) {
+                  let lang = "React.js";
+                  document.write("var lang = " + lang + "<br/>");
+            }
+
+            document.write("var lang = " + lang + "<br/>");
+            document.write("var lang = " + lang + "<br/>");
+
+      </script>
+
+</body>
+
+</html>
