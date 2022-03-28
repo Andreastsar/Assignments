@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>JS Ex 8 - Objects v1</title>
+</head>
+
+<body>
+      <p>
+            In Javascript an Object is a container of properties, where a property has a name and a value.
+            In JavaScript, arrays is a special kind of object, functions are objects, regular expressions
+            are objects and, of course, objects are objects.
+      </p>
+      <p>
+            At their core objects are containers storing related data and functionality. Objects in JaObjects can
+            contain other objects so they can easily represent more complex data structures like trees and graphs.
+      </p>
+      <h2>Object Literals</h2>
+      <p>
+            It is the simplest way to create an object. An object literal can be created as a pair of curly braces ({ })
+            containing zero or more name/value pairs. A value in an object can be updated directly by assignment. If the
+            property name is already there, the value of the property is replaced with the new one.
+      </p>
+
+
+
+      <hr />
+
+      <script>
+            const ship = {
+                  name: 'Olympic Cruiser',
+                  category: 'P / V',
+                  fuelType: 'diesel',
+                  color: 'Yellow',
+                  passengers: 500,
+                  speed: 22,
+                  sealine: ["Paros", "Naxos", "Rodos", "Kos"],
+                  info: function () {
+                        document.write(`Shipname: ${this.name}, Speed: ${this.speed}`);
+                  }
+            };                                                     // this is a Literal Object
+
+            console.table(ship);
+            document.write(`Shipname: ${ship.name}<br/>`);         // call an object and then the tag(for value) you want, f.e. name,category etc.
+            document.write(`Number of passengers: ${ship.passengers}<br/>`);
+            document.write(`Cruising Speed: ${ship['speed']} knots<br/>`);          // NOT SUGGESTED FOR USE THIS OBJECT NOTATION
+
+            const names1 = ["John", "Mary"];
+            const names2 = {
+                  "0": "John",
+                  "1": "Mary"
+            }                                        // names1 is the same as names2
+            document.write(`<hr/>`);
+            document.write(`Ship Information:<br/>`);
+            ship.info();
+      </script>
+</body>
+
+</html>
