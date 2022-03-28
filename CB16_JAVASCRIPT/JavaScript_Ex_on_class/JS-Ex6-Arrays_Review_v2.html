@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>JS Ex 6 - Arrays Review v2</title>
+</head>
+
+<body>
+      <script>
+            const emptyArr = [];
+            const numbers = [1, 2, 3, "45", "fifty-six"];
+            const grades = [5, 6, 4, 3, 10];
+            const miscellaneous = ["John", 98.6, true, false, null, undefined, ['nested', 'subarray'], 15, NaN];
+            const names = ["John", "Mary", "George"];               // this is an array
+            const nameAsString = "John, Mary, George";              // this is a string
+
+            const info = [
+                  ["Vag", "Pappas", "Ilion", "Attiki", ["Nikos", "Georgia"]],
+                  ["Nick", "Stavrou", "Glyfada", "Attiki", [null, null]]
+            ]
+            const students = ["Rapti", "Agakos", "Marineru", "Mike V"];
+
+            console.log(emptyArr);
+            console.log(numbers);
+            console.log(miscellaneous);
+            console.log(names);
+            console.log(info);
+            console.log(typeof emptyArr[0], typeof numbers[1], typeof numbers[3]);
+            console.log(miscellaneous.length);
+            console.log(nameAsString.split(","));                 // whenever JS "finds" the ',' then it splits the given string
+            console.log(typeof nameAsString.split(","));
+
+            document.write(`numbers array 1st element: ${numbers[0]}<br/>`);
+            document.write(`numbers array length: ${numbers.length}<br/>`);
+            document.write(names + "<br/>");
+            document.write(names.toString() + "<br/>");
+            document.write("<hr/>");
+
+            names.push("Mike");                                   // adds a new element AT THE END of the Array - MUTATES
+            document.write(names + "<br/>");
+            document.write(`names array length: ${names.length}<br/>`);
+            document.write("<hr/>");
+
+            names.pop();                                          // removes the LAST element of the Array - MUTATES
+            document.write(names + "<br/>");
+            document.write(`names array length: ${names.length}<br/>`);
+            document.write("<hr/>");
+
+            names.unshift("Joanna");                                   // adds a new element AT THE START of the Array - MUTATES
+            document.write(names + "<br/>");
+            document.write(`names array length: ${names.length}<br/>`);
+            document.write("<hr/>");
+
+            names.shift("Joanna");                                   // removes the FIRST element of the Array - MUTATES
+            document.write(names + "<br/>");
+            document.write(`names array length: ${names.length}<br/>`);
+            document.write("<hr/>");
+
+            names.reverse();                                         // reverse the row of the array
+            document.write(names.toLocaleString() + "<br/>");
+
+            document.write(students.sort());                            // sorts the elements of the array alphabetically
+            document.write("<hr/>");
+            document.write(grades.sort());                              // sort does not work cause it applies a sort on WORDS/strings, instead of numbers
+            document.write("<hr/>");
+            
+            document.write(grades.sort(function(a,b) {
+                  return a-b;
+            }));                                                        // this is the right way to sort NUMBERS
+            
+            
+      </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>JS Ex 5 - Arrays Review</title>
+</head>
+
+<body>
+      <h1>Level 0 - Ex 3 - More Array Methods</h1>
+      </p>
+      <h2>The <code>Array.join()</code> Method</h2>
+      <p>The <code>Array.join()</code> converts all the elements of the array to strings and
+            concatenates them, returning the resulting string. This method is the inverse of the
+            <code>String.split()</code> method, which creates an array by breaking a string into pieces.
+      </p>
+      <h2>The <code>Array.slice()</code> Method</h2>
+      <p>The <code>Array.slice()</code> method returns a sliced subarray of the specified array. Its two
+            arguments specify the start and end of array slice to be returned.
+            <hr />
+
+            <script>
+                  var emptyArr = [];   //Not used since 2016, instead use the const
+                  const numbers = [1, 2, 3];
+                  const arrayMixed = [1, 2, null, "Poikilidis"];
+
+                  for (let i = 0; i < arrayMixed.length; i++) {
+                        document.write(`Array Item #: + ${i} - ${arrayMixed[i]}<br/>`);
+                  }
+
+                  document.write(`<hr/>`);
+
+                  for (let value of arrayMixed) {                     // for ... of --> It returns the VALUES of the array.
+                        document.write(`Array item: ${value}<br/>`);
+                  }
+
+                  document.write(`<hr/>`);
+
+                  document.write(numbers.join(","));
+                  console.log(numbers.join(" "));
+                  document.write(`<hr/>`);
+
+                  const sequence = [1, 2, 3, 4, 5];
+                  document.write(`<br/>${sequence.slice(0, 3)}`);        // slice does not mutate the original array
+                  console.log(sequence);
+                  document.write(`<br/>${sequence.slice(3)}`);          // return from: 3 to end
+                  document.write(`<br/>${sequence.slice(1, -1)}`);          // return [2, 3, 4] and counts backwards
+            </script>
+</body>
+
+</html>

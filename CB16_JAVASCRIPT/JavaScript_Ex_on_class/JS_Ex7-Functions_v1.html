@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>JS Ex 7 - Functions v1</title>
+</head>
+
+<body>
+      <script>
+            function writeMsg(message) {
+                  if (message) {
+                        document.write(`<p><b>${message}</b></p><br/>`);
+                  } else {
+                        document.write(`<p>No message to write</p><br/>`);
+                  }
+                  document.write(`<hr/>`);
+            }
+
+            writeMsg('Hello');
+            writeMsg();
+
+            myName = function () {                                 // This is NOT SUGGESTED, THIS IS **HOISTING**
+                  document.write(`My name is Andreas<br/>`);
+                  document.write(`<hr/>`);
+            }
+
+            const Myname = function () {                           // This is the right way to do this
+                  document.write(`My name is Andreas<br/>`);
+                  document.write(`<hr/>`);
+            }
+
+            Myname();
+            console.log(myName());
+            console.log(myName);
+
+            function favouriteActivity(name = "Joe", activity = "run") {        // setting default values to parameters
+                  document.write(`Mr ${name} likes to ${activity}<br/>`);
+            }
+
+            favouriteActivity("Andreas", "Hike");
+            document.write(`<hr/>`);
+            favouriteActivity();
+            document.write(`<hr/>`);
+
+            function addTwoSquaredNumbers(a, b) {
+                  return ((a ** 2) + (b ** 2));
+            }
+
+            document.write(addTwoSquaredNumbers(3, 4));
+            document.write(`<hr/>`);
+            document.write(addTwoSquaredNumbers("Andreas", 4));               // This will not work cause Andreas isNaN
+            document.write(`<hr/>`);
+
+
+      </script>
+</body>
+
+</html>
