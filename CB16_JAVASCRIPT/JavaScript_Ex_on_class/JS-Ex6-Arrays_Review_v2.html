@@ -66,12 +66,23 @@
             document.write("<hr/>");
             document.write(grades.sort());                              // sort does not work cause it applies a sort on WORDS/strings, instead of numbers
             document.write("<hr/>");
-            
-            document.write(grades.sort(function(a,b) {
-                  return a-b;
+
+            document.write(grades.sort(function (a, b) {
+                  return a - b;
             }));                                                        // this is the right way to sort NUMBERS
-            
-            
+
+            function compareTwoNumbers(a, b) {
+                  //a function that is made for comparing two numbers , then using it through sort to sort NUMBERS
+                  return a - b;
+            }
+
+            grades.sort(compareTwoNumbers);
+            // grades.sort(function(a,b) {
+            //      return a-b;
+            //  })
+            document.write(grades.toString() + "<br/>");
+            document.write("<hr/>");
+
       </script>
 </body>
 
