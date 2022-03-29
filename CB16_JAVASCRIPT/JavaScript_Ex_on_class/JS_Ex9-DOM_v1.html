@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title></title>
+      <!--Title will change with JS-->
+</head>
+
+<body>
+      <h1>Ex 9 - Document Object Model (DOM) 1</h1>
+      <p>
+            The DOM is your gateway to the contents of a web page and the key to making your pages
+            come alive with JavaScript.
+            The DOM is also an extremely detailed resource from which you can determine just about
+            anything about the content and layout of a web page.
+      </p>
+      <h2><code>Window</code> and <code>Document Objects</code></h2>
+      <p>
+            The <code>Window</code> object is the main entry point to all client-side JavaScript features. This object
+            is at the top of the scope chain and its methods and properties are essentially global variables and global
+            functions.
+      </p>
+      <p>
+            The <code>Document</code> object is one of the most important properties of the Window object. It refers to
+            Document object that represents the content displayed in the browser window.
+      </p>
+      <h2>The <code>document.getElementById()</code> Method</h2>
+      <p>The easiest way to find an HTML element in the DOM, is by using
+            the <code>id</code> element. If the element is found, the method returns the element as an
+            object you can assign to a variable, otherwise element is null. We can use the
+            <code>getElementById()</code> method of the <code>Document</code> object.
+      </p>
+      <h2>The <code>document.getElementsByTagName()</code> Method</h2>
+      <p>
+            If we want to find all HTML elements with the same tag we can use the
+            <code>getElementsByTagName()</code> method.
+      </p>
+      <h2>The <code>document.getElementsByClassName()</code> Method</h2>
+      <p class="someclass">
+            If we want to find all HTML elements with the same class name we can use
+            <code>getElementsByClassName()</code> method.
+      </p>
+      <h2>The <code>document.querySelectoreAll()</code> Method</h2>
+      <p class="someclass">
+            If we want to find all HTML elements that match a specified CSS selector (id, class, types)
+            we can use the <code>querySelectorAll()</code> method.
+      </p>
+      <hr />
+      <div id="content"></div>
+      <div id="tag"></div>
+      <div id="class"></div>
+      <div id="query-selector"></div>
+      <div id="h2-content"></div>
+
+      <script>
+            document.title = "JS Ex 9 - DOM v1";                          // sets the <Title></Title> of the page
+            // var theContent = document.getElementById('content');        // "call" the div with id=content
+            // theContent.innerHTML = "Hello from 'content' div.";         // set the selected div's content
+
+            var theContent = document.getElementById('content').innerHTML = "Hello from div with id='content'.";  // it is the same as the comments above
+
+            var h1Tag = document.getElementsByTagName('h1');
+            var h2Tag = document.getElementsByTagName('h2');             // HTML object, cause it has multiple elements, in this case five h2 tags
+            var pTag = document.getElementsByTagName('p');               // HTML object, cause it has multiple elements, multiple p tags
+
+            document.getElementById('tag').innerHTML = "Header 1 Content: " + h1Tag[0].innerHTML;      // we set the content of the div with id=tag
+
+            for (let i = 0; i < h2Tag.length; i++) {
+                  document.getElementById('h2-content').innerHTML += "Header 2 content #: " + (i + 1) + ": " + h2Tag[i].innerHTML + "<br/>";
+            }                                                            // we set the content of the div with id=h2-content
+
+            var pSomeClass = document.getElementsByClassName('someclass');           //select all elements with class='someclass'
+            document.getElementById('class').innerHTML = "Paragraph with class='someclass' Content: " + pSomeClass[0].innerHTML;     // change the content of the 1st element of the pSomeClass var
+
+            var txt = document.querySelectorAll('p.someclass');
+            document.getElementById('query-selector').innerHTML = "Paragraph with class='someclass' Content: " + txt[0].innerHTML;  //same as the above code but with querySelectorAll,
+                                                                                                                                    //it's a different way to select multiple object in the page
+      </script>
+</body>
+
+</html>

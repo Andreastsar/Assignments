@@ -54,6 +54,17 @@
             document.write(addTwoSquaredNumbers("Andreas", 4));               // This will not work cause Andreas isNaN
             document.write(`<hr/>`);
 
+            const addition = function (x, y) {                    // this function returns an OBJECT as an output
+                  return {
+                        result: x + y,
+                        number1: x,
+                        number2: y
+                  };
+            };
+
+            var sum = addition(5, 3);
+            document.write(`${sum.number1} + ${sum.number2} = ${sum.result}`);
+            document.write(`<hr/>`);
 
       </script>
 </body>

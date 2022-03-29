@@ -56,6 +56,33 @@
             document.write(`<hr/>`);
             document.write(`Ship Information:<br/>`);
             ship.info();
+            document.write(`<hr/>`);
+
+            document.write(`<br/><strong>Sealine of ${ship.name}</strong><br/>`);
+            for (let i of ship.sealine) {
+                  document.write(`${i}<br/>`);
+            }
+            document.write(`<hr/>`);
+            document.write(JSON.stringify(ship));      //JSON is used to send / receive info from objects through various applications - ***FUNCTIONS ARE NOT TRANSFERABLE***
+
+            document.write(`<hr/>`);
+            document.write(`Second port destination of ${ship.name} is ${ship.sealine[1]}<br/>`);
+            document.write(`<hr/>`);
+
+            let speed = (ship.speed > 25) ? "Fast ship" : "Slow ship";   // the TERNARY operator --> var x = (condition) ? value1 : value2;
+            document.write(speed);
+            document.write(`<hr/>`);
+
+            let hits = 1;
+            hits = parseInt(hits);
+            document.write(`You hit the target ${hits} ${hits === 1 ? "time" : "times"}`);  // we prefer to check condition with triple equals === instead of ==
+            document.write(`<hr/>`);
+
+            let txt = "";
+            for (let x in ship) {
+                  txt += ship[x] + " ";
+            };
+            document.write(`${txt}`);
       </script>
 </body>
 

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>JS Ex 10 - DOM v2 Forms</title>
+</head>
+
+<body>
+      <h1>JS Ex 10 - Document Object Model (DOM) 2</h1>
+      <p>In this exercise we construct a simple form. We will use the <code>forms</code>
+            attribute of the <code>Document</code> browser object to obtain the values of all the form
+            elements and display them to the user.
+      </p>
+
+      <form action="" id="form1" method="">
+            <fieldset>
+                  <legend>Simple Info Form</legend>
+                  <label for="firstname">First Name:</label>
+                  <input type="text" name="fname" value="John"><br />
+                  <label for="lastname">Last Name:</label>
+                  <input type="text" name="lname" value="Connor"><br />
+                  <label for="checkbox">Remember me:</label>
+                  <input type="checkbox" name="chkbox" id="" value="remember_me"><br />
+
+                  <p><input type="submit" value="Submit"></p>
+            </fieldset>
+      </form>
+      <button onclick="displayFormData()">Display</button>
+      <hr />
+      <div id="content"></div>
+
+      <script>
+            function displayFormData() {
+                  var frm = document.forms['form1'];              // the .form method it gets all elements of the given form, in this case form1
+                  var text = "";
+                  for (let i = 0; i < frm.length; i++) {
+                        text += frm.elements[i].value + "<br/>";  // .elements --> get all elements in position [i] of the frm var, then reveal their .value
+                  }
+                  document.getElementById('content').innerHTML = text;
+            }
+      </script>
+</body>
+
+</html>
