@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title></title>
+</head>
+<body>
+      <h1>Ex 9 - Document Object Model (DOM) 1</h1>
+      <p>
+            The DOM is your gateway to the contents of a web page and the key to making your pages
+            come alive with JavaScript.
+            The DOM is also an extremely detailed resource from which you can determine just about
+            anything about the content and layout of a web page.
+      </p>
+      <h2><code>Window</code> and <code>Document Objects</code></h2>
+      <p>
+            The <code>Window</code> object is the main entry point to all client-side JavaScript features. This object
+            is at the top of the scope chain and its methods and properties are essentially global variables and global
+            functions.
+      </p>
+      <p>
+            The <code>Document</code> object is one of the most important properties of the Window object. It refers to
+            Document object that represents the content displayed in the browser window.
+      </p>
+      <h2>The <code>document.getElementById()</code> Method</h2>
+      <p>The easiest way to find an HTML element in the DOM, is by using
+            the <code>id</code> element. If the element is found, the method returns the element as an
+            object you can assign to a variable, otherwise element is null. We can use the
+            <code>getElementById()</code> method of the <code>Document</code> object.
+      </p>
+      <h2>The <code>document.getElementsByTagName()</code> Method</h2>
+      <p>
+            If we want to find all HTML elements with the same tag we can use the
+            <code>getElementsByTagName()</code> method.
+      </p>
+      <h2>The <code>document.getElementsByClassName()</code> Method</h2>
+      <p class="someclass">
+            If we want to find all HTML elements with the same class name we can use
+            <code>getElementsByClassName()</code> method.
+      </p>
+      <h2>The <code>document.querySelectoreAll()</code> Method</h2>
+      <p class="someclass">
+            If we want to find all HTML elements that match a specified CSS selector (id, class, types)
+            we can use the <code>querySelectorAll()</code> method.
+      </p>
+      <hr />
+      <div id="content"></div>
+      <div id="tag"></div>
+      <div id="class"></div>
+      <div id="query-selector"></div>
+      <div id="h2-content"></div>
+
+      <script>
+            document.title = "Js Ex 9 Dom v1";
+            document.getElementById('content').innerHTML = "Hello from div with id='content.";
+
+            var h1Tags = document.getElementsByTagName('h1');
+            console.log(h1Tags);
+            document.getElementById('tag').innerHTML = "Header 1 Content: " + h1Tags[0].innerHTML;
+            
+            var h2Tags = document.getElementsByTagName('h2');
+            for (let i = 0; i<h2Tags.length; i++) {
+                  document.getElementById('h2-content').innerHTML += "Header 2 content # : " + (i+1) + " : " + h2Tags[i].innerHTML + "<br/>";
+            }
+
+            var pTag = document.getElementsByClassName('someclass');
+            for (let i=0; i<pTag.length; i++) {
+                  document.getElementById('class').innerHTML += "Paragraph #: " + (i+1) + " with class = 'someclass' content: " + pTag[i].innerHTML + "<br/>";
+            }
+      </script>
+</body>
+</html>

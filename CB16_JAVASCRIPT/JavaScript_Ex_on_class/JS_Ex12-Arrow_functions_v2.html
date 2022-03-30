@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>JS Ex 12 - Arrow Functions v2</title>
+</head>
+
+<body>
+      <script>
+
+            // 2 Ways to create the same function with arrow functions
+            const subTotal1 = function (price, quantity) {
+                  return price * quantity;
+            }
+
+            const subTotal2 = (price, quantity) => {
+                  return price * quantity;
+            }
+
+            const subTotal3 = (price, quantity) => price * quantity;
+
+            // TRIM: Removes the spaces before or after the phrase without changing the original string, --> then the SPLIT splits the words into an Array
+            const stringToArray = function (input) {
+                  return input.trim().split(' ');
+            }
+            const stringToArray2 = (input) => input.trim().split(' ');        //same function with stringToArray, but this is an arrow function
+
+      </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Exercise page 77</title>
+</head>
+
+<body>
+      <script>
+            const myPhone = {
+                  Brand: "Samsung",
+                  Model: "Galaxy S22 Ultra",
+                  Cores: 8,
+                  Storage_in_gb: 64,
+                  Screen_size_in_inches: 5.8,
+                  Features: ["SMS", "MMS", "Email", "Push mail", "IM"]
+            }
+            var feats = "";
+            for (let i = 0; i < myPhone.Features.length; i++) {
+                  feats += myPhone.Features[i] + " , ";
+            }
+
+            document.write(`The specifications of ${myPhone.Brand} ${myPhone.Model} are : it has ${myPhone.Cores} Cores,
+             ${myPhone.Storage_in_gb} GB RAM memory, it's screen size is ${myPhone.Screen_size_in_inches} inches, and plenty of features such as: ${feats} and much more!`);
+      </script>
+</body>
+
+</html>

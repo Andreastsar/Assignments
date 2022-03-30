@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>JS Ex 15 - Cylinder Volume App</title>
+      <style>
+
+      </style>
+</head>
+
+<body>
+      <h1>The Cylinder Volume App</h1>
+      <div id="container">
+            <form action="" name="form">
+                  <label for="radius">Radius</label>
+                  <input type="number" name="radius" id="radius" placeholder="radius in cm..." min="1" max="1000"
+                        required><br />
+                  <label for="height">Height</label>
+                  <input type="number" name="height" id="height" placeholder="height in cm..." min="1" max="1000"
+                        required><br />
+                  <label for="litres">Result in Litres</label>
+                  <input type="checkbox" name="litres" id="litres"><br />
+            </form>
+            <button id="calculate">Calculate</button>
+            <div id="result">
+
+            </div>
+      </div>
+      <script>
+            function calculate() {
+                  var radius = document.forms[0].elements[0].value;
+                  var height = document.forms[0].elements[1].value;
+                  //  var height = document.getElementById('height').value;
+                  //  var radius = document.getElementById('radius').value;
+                  var chkLitres = document.getElementById('litres');
+
+                  var output = document.getElementById('result');
+                  console.log(radius);
+                  console.log(height);
+                  console.log(chkLitres);
+
+                  const cylinderVolume = (r, h) => (Math.PI * Math.pow(r, 2) * height);          // .toFixed(n) --> this will appear n decimal numbers
+
+                  if (chkLitres.checked) {
+                        output.innerHTML = `Cylinder Volume = ${(cylinderVolume(radius, height) / 1000).toFixed(2)} lt.`;
+                  } else {
+                        output.innerHTML = `Cylinder Volume = ${cylinderVolume(radius, height).toFixed(2)} cm<sup>3</sup>.`;
+                  }
+            }
+
+            document.getElementById('calculate').addEventListener("click", calculate);
+
+
+      </script>
+</body>
+
+</html>

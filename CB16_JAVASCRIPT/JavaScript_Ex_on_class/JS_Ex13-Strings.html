@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>JS Ex 13 - Strings</title>
+</head>
+
+<body>
+      <script>
+            var str = "Hello World!";
+            var phrase = `Spliting a string to array elements. Very Useful`;
+            var expression = 'Don\'t panic! Keep studying programming';             // how to write code with only single quotes ' ' --> use the escape \' operator
+            var betterExpression = "Don't panic! Keep studing programming!";
+
+            var empty = "" || '';                                                   // create an empty string
+            var empty2 = "";
+
+            var ln = str.length;
+            var ln2 = expression.length;
+            var name = "Vag Pap";
+            var spanishGreet = str.replace("Hello", "Hola");
+
+
+            document.write("Greeting in (ENG): " + str + "<br/>");
+            document.write("Greeting in (ESP): " + spanishGreet + "<br/>");
+            document.write(`<hr/>`);
+
+            console.log(str.length);
+
+            document.write("Phrase <em>'" + expression + "'</em> length is " + ln2 + " characters long<br/>");
+            document.write(`<hr/>`);
+
+            document.write("String in Uppercase: " + name.toUpperCase() + "<br/>");       // String to UpperCase
+            document.write("String in Lowercase: " + name.toLowerCase() + "<br/>");       // String to LowerCase
+            document.write("String in Lowercase (locale): " + name.toLocaleLowerCase() + "<br/>");
+            document.write(`<hr/>`);
+
+            var haystack = "123456A";           // Replacing part of a string with another string
+            var replaceString = "****";
+            var newString1 = haystack.replace("1234", replaceString);
+            document.write(haystack + "<br/>");
+            document.write(newString1 + "<br/>");
+            document.write(`<hr/>`);
+
+            var newString2 = haystack.substr(5, 2);    // SUBSTR --> FROM : 5th char , TO : 2 next chars of the string
+            document.write(newString2 + "<br/>");
+            document.write(`<hr/>`);
+
+            // TRIM: Removes the spaces before or after the phrase without changing the original string, --> then the SPLIT splits the words into an Array
+            const stringToArray = (input) => input.trim().split(' ');
+
+            console.log(stringToArray(phrase));
+            console.table(stringToArray(phrase));
+            document.write(stringToArray(phrase));
+            document.write(`<hr/>`);
+
+            // Function for checking empty forms
+            const isBlank = function(input) {
+                  if (input.length === 0) {
+                        return true;
+                  } else {
+                        return false;
+                  }
+            }
+
+            document.write(isBlank(empty) + "<br/>");
+            document.write(isBlank(empty2) + "<br/>");
+            document.write(isBlank(haystack) + "<br/>");
+            document.write(`<hr/>`);
+
+      </script>
+</body>
+
+</html>

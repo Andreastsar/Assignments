@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>JS Ex 11 - Arrow Functions v1</title>
+</head>
+
+<body>
+      <script>
+            const hello1 = function () {
+                  return "Hello world!";
+            }
+
+            //Arrow function , it's the same (there is a difference with .this, we will see later)
+            const hello2 = () => {
+                  return "Hello world!";
+            }
+
+            const hello3 = () => "Hello world!";      // Same as the above functions
+
+            const hello4 = (name) => "Hello Mr/Mrs " + name + " !";     //arrow function with one parameter
+
+            const add = (x, y) => "The sum of " + x + " + " + y + " equals with " + (x+y) + ".";
+            const square = (x) => "The square of " + x + " is " + (x * x);
+
+            document.write(hello1() + "<br/>");
+            document.write(`${hello2()}<br/>`);
+            document.write(`${hello3()}<br/>`);
+            document.write(`${hello4("Andreas Tsarouchas")}<br/>`);
+            document.write(add(3,4) + "<br/>");
+            document.write(square(5) + "<br/>");
+
+
+      </script>
+</body>
+
+</html>

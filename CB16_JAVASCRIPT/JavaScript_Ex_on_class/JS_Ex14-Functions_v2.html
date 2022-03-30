@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>JS Ex 14 - Functions v2</title>
+</head>
+
+<body>
+      <script>
+            // MORE ADVANCED FUNCTIONS HERE 
+
+            // NESTED FUNCTION
+            function double(number, func) {
+                  number *= 2;
+                  if (func) {
+                        number = func(number);
+                  }
+                  return number;
+            }
+
+            function tripleNumber(x) {
+                  return 3 * x;
+            }
+
+            document.write(`${double(5, Math.sqrt)}<br/>`);
+            
+            document.write(`${double(5)}<br/>`);
+            
+            document.write(`${double(5, tripleNumber)}<br/>`);
+            
+            document.write(`${double(5, function(x) {return x*4;})}<br/>`);   // we can use an anonymous function for parameter , creating it inside without pre-existing
+            
+            document.write(`${double(5, (x) => x*5)}<br/>`);                  // we can use an ARROW FUNCTION inside as before
+
+            document.write(`${double(5, double)}<br/>`);                      // we can also call the function itself inside the parameter
+
+
+      </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Functions in JS</title>
+</head>
+<body>
+      <script>
+            document.write(`<b>This is a function constructor<b/><br/>`);
+            function function1(theObject) {
+                  theObject.make = "Toyota";
+            }
+            var myCar = {make : "Honda", model : "Accord", year : 1998};
+            var x , y;
+            x = myCar.make;         // x gets the value "Honda"
+            function1(myCar);       // now var myCar changes its value from Honda-->Toyota
+            y = myCar.make;        // y gets the value "Toyota"
+            document.write(`x model is: ` + x + `<br/>`);
+            document.write(`y model is: ` + y);
+            document.write(`<hr/>`);
+
+            //Anonymous function Expression
+            document.write(`<b>Anonymous function Expression<b/><br/>`);
+            var calcSubtotal = function(price, quantity) {
+                  return price*quantity;
+            }
+            var result1 = calcSubtotal(10,2);
+            document.write(`Result 1 : 10 * 2 = ${result1}`);
+            document.write(`<hr/>`);
+
+            //Nested functions
+            document.write(`<b>Nested functions<b/><br/>`);
+
+            function calcTotal(price, quantity) {
+                  let subtotal = price * quantity;
+                  return subtotal + calculateTax(subtotal);
+                  //this function is nested
+                  function calculateTax(subtotal) {
+                        let taxRate = 0.05;
+                        let tax = subtotal*taxRate;
+                        return tax;
+                  }
+            }
+            document.write(`The price for 4 bags that cost 20 euros / per bag  after taxes of 5% is a total of: ${calcTotal(20,4)} euros.<br/>`);
+            document.write(`<hr/>`);
+
+      </script>
+</body>
+</html>

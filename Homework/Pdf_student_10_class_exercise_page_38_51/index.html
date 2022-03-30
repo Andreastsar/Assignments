@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Ex 8</title>
+</head>
+
+<body>
+      <script>
+            var x = prompt("What fruit do you want to buy?");
+            switch (x) {
+                  case "Bananas": document.write("Bananas cost 0,99 $/kg");
+                        break;
+                  case "Oranges": document.write("Oranges cost 0,79 $/kg");
+                        break;
+                  case "Apples": document.write("Apples cost 0,89 $/kg");
+                        break;
+                  case "Grapes": document.write("Grapes cost 3,99 $/kg");
+                        break;
+                  default: document.write("Cherries cost 2,99 $/kg");
+            }
+
+            document.write(`<hr/>`);
+
+            const myCar = {
+                  model: "BMW E63 M3",
+                  year: 2006
+            }
+            document.write(`My favourite car is ${myCar.model} and it was made in ${myCar.year} !`);
+
+            document.write(`<hr/>`);
+
+            function car(make, model, year) {
+                  this.make = make;
+                  this.model = model;
+                  this.year = year;
+            }
+            document.write(`<hr/>`);
+
+            const car1 = new car("BMW", "E63", "2006");
+            document.write(`Car 1 is the ${car1.make} ${car1.model}, and it was made in ${car1.year}`);
+            document.write(`<hr/>`);
+
+            var Animal = { type: "bird", size: "small" };
+            const animal1 = Object.create(Animal);
+            console.log(animal1);
+            var d = new Date();
+            alert("Today is : " + d.toString());
+      </script>
+</body>
+
+</html>
