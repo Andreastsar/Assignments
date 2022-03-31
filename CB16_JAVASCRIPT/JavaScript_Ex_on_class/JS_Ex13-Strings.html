@@ -58,13 +58,15 @@
             document.write(`<hr/>`);
 
             // Function for checking empty forms
-            const isBlank = function(input) {
-                  if (input.length === 0) {
-                        return true;
-                  } else {
-                        return false;
-                  }
-            }
+            // const isBlank = function(input) {
+            //       if (input.length === 0) {
+            //             return true;
+            //       } else {
+            //             return false;
+            //       }
+            // }
+
+            const isBlank = (input) => (input.length === 0) ? true : false;
 
             document.write(isBlank(empty) + "<br/>");
             document.write(isBlank(empty2) + "<br/>");
