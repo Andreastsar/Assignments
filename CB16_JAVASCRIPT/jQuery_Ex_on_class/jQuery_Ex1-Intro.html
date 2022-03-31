@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>jQuery Ex 1 - Introduction</title>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <!--Implementing the Google CDN for jQuery-->
+</head>
+
+<body>
+      <h1>jQuery Ex 1 - Looping, Chaining and Filtering</h1>
+      <!--The basic uses of jQuery-->
+
+      <p>
+            After you've identified an object or a set of objects, you can apply jQuery methods and techniques.
+      </p>
+      <p>It is very common to loop in JavaScript through DOM Elements. jQuery loops automatically through a set of
+            elements
+      </p>
+      <p>We can also chain methods to the same jQuery element set</p>
+      <h2>Looping through the bullet list</h2>
+      <ul>
+            <li>First</li>
+            <li>Second</li>
+            <li>Third</li>
+      </ul>
+      <hr />
+      <script>
+            let bullets = document.querySelectorAll('li');
+            for (let i = 0; i < bullets.length; i++) {
+                  bullets[i].style.fontSize = "1.4em";
+            }
+
+            console.log(bullets);
+            bullets = $('li');   // instead of jQuery===$  -->      bullets = jQuery('li');
+            for (let i = 0; i < bullets.length; i++) {
+                  bullets[i].style.color = "tomato";
+            }
+
+            //A page can't be manipulated safely until the document is "ready." jQuery detects this state of readiness for you.
+            // Code included inside $( document ).ready() will only run once the page Document Object Model (DOM) is ready for JavaScript code to execute.
+            // Code included inside $( window ).on( "load", function() { ... }) will run once the entire page (images or iframes), not just the DOM, is ready.
+
+            $(document).ready(function () {
+                  $('li').css({ 'color': 'blue', 'fontSize': '2em', 'background-color': 'red' });
+            });
+
+      </script>
+</body>
+
+</html>

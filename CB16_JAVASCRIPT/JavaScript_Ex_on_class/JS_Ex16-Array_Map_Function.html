@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>JS Ex 16 - Arrow + Function</title>
+</head>
+
+<body>
+      <h1>The JavaScript Array <code>map()</code> Method</h1>
+      <p>
+            Original array: [25, 144, 49, 225]
+      </p>
+
+      <button type="button" onclick="squareRoots()">Compute</button>
+      <p>Square Roots:</p>
+
+      <div id="content">
+
+      </div>
+
+      <script>
+
+            // the map method, grabs all the array elements and implements the function to every one of them
+            // without Mutating the original Array, and creates a new Array
+
+            function squareRoots() {
+                  const numbers = [25, 144, 49, 225];
+                  var squareRoots = numbers.map(Math.sqrt);
+
+                  document.querySelector('#content').innerHTML = squareRoots;
+                  // document.getElementById('content').innerHTML = squareRoots;   it's the same as the line above
+                  console.log(squareRoots);
+            }
+
+            function doubleArray() {
+                  const digits = [2, 3, 5, 8, 40];
+                  const diplasiazo = function (x) {
+                        return x * 2;
+                  }
+                  var doubles = digits.map(x => x * 2);
+            }
+
+      </script>
+
+</body>
+
+</html>

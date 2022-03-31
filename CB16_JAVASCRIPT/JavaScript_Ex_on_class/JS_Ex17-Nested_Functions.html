@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>JS Ex 17 - Nested Functions</title>
+</head>
+<body>
+      <script>
+
+            const FPA = 0.24; // IF this is gonna be immutable for all code, we can declare the variable with Upper Chars
+
+            function map(arr, func) {
+                  var result = [];
+                  for (let i=0; i < arr.length; i++) {
+                        result[i] = func(arr[i]);
+                  }
+                  return result;
+            }
+
+            var numbers = [16, 25, 36, 49];
+            var prices = [20, 40, 100, 5000];
+
+            var doubles = map(numbers, (x) => 2 * x);
+            console.log(doubles);
+            var squares = map(numbers, Math.sqrt);
+            console.log(squares);
+
+            var priceWithFPA = map(prices, (pr) => pr * (1 + FPA));     //return the original price + the FPA cost ---> pr + pr*FPA
+            console.log(priceWithFPA);
+
+      </script>
+</body>
+</html>
