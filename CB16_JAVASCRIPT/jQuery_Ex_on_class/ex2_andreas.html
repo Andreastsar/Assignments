@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>JQ -ex2 Andreas</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+      <h1>Hide and Show Methods</h1>
+      <p id="hide1">This is going to disappear!</p>
+      <button type="button" id="disBut">Disappear!</button>
+      <button type="button" id="appBut">Come back pls!</button>
+      <hr />
+      <h1>Combining jQuery & JS Methods</h1>
+      <h2>Producing a Random Number</h2>
+      <p>Here comes a random number between 1 and 100</p>
+      <button type="button" id="genNum">Generate!</button>
+      <div id="generatedNum"></div>
+      <hr />
+      <h1>Hide on mouse Enter and Leave</h1>
+      <div id="mouse1">
+            <p id="bigger1">Don't come near me pls, i am scared!</p>
+      </div>
+      <hr />
+
+      <script>
+            $(document).ready(function () {
+                  $('#disBut').on('click', () => {
+                        $('#hide1').hide();
+                  });
+                  $('#appBut').on('click', () => {
+                        $('#hide1').show();
+                  });
+                  $('#genNum').on('click', () => {
+                        $('#generatedNum').html("Random number 1-100 = " + Math.floor(((Math.random()) * 100) + 1));
+                  });
+                  $('#bigger1').css({ 'color': 'blue', 'font-size': '3em' });
+                  $('#mouse1').on('mouseenter', () => {
+                        $('#mouse1').hide();
+                  });
+                  $('#mouse1').on('mouseleave', () => {
+                        $('#mouse1').show();
+                  });
+
+            });
+      </script>
+
+</body>
+
+</html>
