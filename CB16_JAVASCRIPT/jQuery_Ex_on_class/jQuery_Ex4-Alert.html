@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>jQuery Ex 3 - Alert</title>
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+      <div class="w3-container">
+            <header>
+                  <h1>jQuery Ex 4 - Basic jQuery Theory</h1>
+            </header>
+            <p>jQuery is an add-on library for JavaScript. Think of jQuery as JavaScript code
+                  that’s been written for you. In general, all you have to do is include a line or
+                  two of code in your page that calls the jQuery code. </p>
+            <p>jQuery lets you easily change the appearance, location or behavior of elements
+                  on a Web page.</p>
+            <p>jQuery is an open source lightweight JavaScript library that can be attached to Web pages and
+                  simplifies interaction between an HTML document, or more precisely the <strong> Document Object
+                        Model - DOM </strong>, and JavaScript.
+            </p>
+            <p>Specifically, jQuery simplifies HTML document traversion, manipulation, event handling, DOM animations,
+                  AJAX interaction and in general cross browser JavaScript Development.</p>
+            <p>In our first exercise we'll see how we can activate a function with jQuery after the DOM
+                  has finished loading. jQuery provides the <code>ready()</code> method for this purpose.
+                  It's a custom event handler that is bound to the DOM. after this we will display the
+                  properties of an image in the page.</p>
+
+            <h3>Ex 1 - Displaying the properties of an image </h3>
+            <img src="jQuery-logo.png" height="150" width="500" alt="This is the jQuery official logo">
+
+            <p id="jquery-ready">The DOM is ready!</p>
+            <div id="content"></div>
+      </div>
+
+      <footer class="w3-container">
+            <p>
+                  &copy; Copyright by iMant Solutions
+            </p>
+      </footer>
+      </div>
+
+      <script>
+            //The alert() method displays an alert box with a message and an OK button.
+            $(document).ready(function () {
+                  alert($('#jquery-ready').text());
+                  alert($('img').attr('alt'));
+                  alert($('img').attr('height'));
+                  alert($('img').attr('width'));
+            });
+      </script>
+</body>
+
+</html>
