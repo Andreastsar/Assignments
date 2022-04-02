@@ -48,40 +48,65 @@
             $(document).ready(function () {
                   $('#content').hide();
 
-                  // $('#show').on('click', () => {
-                  //       $('#content').show();
-                  // });
-                  $('#show').click(showContent);
-                  $('#hide').click(hideContent);
-                  $('#toggle').click(toggleContent);
-                  $('#slide-down').click(slideDownContent);
-                  $('#slide-up').click(slideUpContent);
-                  $('#fade-in').click(fadeInContent);
-                  $('#fade-out').click(fadeOutContent);
+                  $('#show').on('click', () => {
+                        $('#content').show();
+                  });
+
+                  $('#hide').on('click', () => {
+                        $('#content').hide();
+                  });
+
+                  $('#toggle').on('click', () => {
+                        $('#content').toggle();
+                  });
+
+                  $('#slide-down').on('click', () => {
+                        $('#content').slideDown('slow', 'swing');
+                  });
+
+                  $('#slide-up').on('click', () => {
+                        $('#content').slideUp('slow', 'swing');
+                  });
+
+                  $('#fade-in').on('click', () => {
+                        $('#content').fadeIn(3000);
+                  });
+
+                  $('#fade-out').on('click', () => {
+                        $('#content').fadeOut(3000);
+                  });
+
+                  // $('#show').click(showContent);
+                  // $('#hide').click(hideContent);
+                  // $('#toggle').click(toggleContent);
+                  // $('#slide-down').click(slideDownContent);
+                  // $('#slide-up').click(slideUpContent);
+                  // $('#fade-in').click(fadeInContent);
+                  // $('#fade-out').click(fadeOutContent);
 
             })
 
-            function showContent() {
-                  $('#content').show();
-            };
-            function hideContent() {
-                  $('#content').hide();
-            };
-            function toggleContent() {
-                  $('#content').toggle();
-            };
-            function slideDownContent() {
-                  $('#content').slideDown('slow', 'swing');
-            };
-            function slideUpContent() {
-                  $('#content').slideUp('slow', 'swing');
-            };
-            function fadeInContent() {
-                  $('#content').fadeIn(3000);
-            };
-            function fadeOutContent() {
-                  $('#content').fadeOut(3000);
-            };
+            // function showContent() {
+            //       $('#content').show();
+            // };
+            // function hideContent() {
+            //       $('#content').hide();
+            // };
+            // function toggleContent() {
+            //       $('#content').toggle();
+            // };
+            // function slideDownContent() {
+            //       $('#content').slideDown('slow', 'swing');
+            // };
+            // function slideUpContent() {
+            //       $('#content').slideUp('slow', 'swing');
+            // };
+            // function fadeInContent() {
+            //       $('#content').fadeIn(3000);
+            // };
+            // function fadeOutContent() {
+            //       $('#content').fadeOut(3000);
+            // };
 
       </script>
 

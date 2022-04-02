@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>jQuery Ex 5 - on() Method</title>
+      <style>
+            .effect {
+                  font-weight: bold;
+                  color: green;
+                  background-color: black;
+            }
+      </style>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+      <h1>jQuery Ex 5 - The Powerful <code>on()</code> Method</h1>
+      <p>The <code>on()</code> method attaches one or more event handlers for the selected elements and child elements.
+      </p>
+      <hr />
+      <div id="content">Move the mouse over me!</div>
+
+      <script>
+            $(document).ready(function () {
+                  $('#content').on('mouseover mouseout', function () {
+                        $(this).toggleClass('effect');
+                  });
+
+                  // Multiple events with the .on() method
+                  // Better not use Arrow functions as object methods ($(this) context is different)
+                  $('p').on({
+                        mouseover: function () {
+                              $('p').css("background-color", "lightgray");
+                        },
+                        mouseout: function () {
+                              $('p').css("background-color", "lightblue");
+                        },
+                        click: function () {
+                              $('p').addClass('effect');
+                        }
+                  });
+            });
+
+      </script>
+</body>
+
+</html>

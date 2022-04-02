@@ -32,6 +32,7 @@
                   properties of an image in the page.</p>
 
             <h3>Ex 1 - Displaying the properties of an image </h3>
+            <p><a href="https://www.w3schools.com/jquery/" target="blank">More Info</a></p>
             <img src="jQuery-logo.png" height="150" width="500" alt="This is the jQuery official logo">
 
             <p id="jquery-ready">The DOM is ready!</p>
@@ -48,11 +49,42 @@
       <script>
             //The alert() method displays an alert box with a message and an OK button.
             $(document).ready(function () {
-                  alert($('#jquery-ready').text());
-                  alert($('img').attr('alt'));
-                  alert($('img').attr('height'));
-                  alert($('img').attr('width'));
+                  // alert($('#jquery-ready').text());
+                  // alert($('img').attr('alt'));
+                  // alert($('img').attr('height'));
+                  // alert($('img').attr('width'));
+
+                  $('img').on('click', () => {
+                        $('img').hide();
+                  });
+
+                  $(document).keypress(() => {
+                        $('img').show();
+                  });
+
+                  // $(function() {
+                  //       $('img').click(function(event) {
+                  //             $(this).hide();               //   $(this) refers to img since it's nested into the function
+                  //       });
+                  // });
+
+                  // $(function() {
+                  //       $('body').keypress(function() {
+                  //             $('img').show();
+                  //       });
+                  // });
+
+                  $('#content').html("Image Alt: " + $('img').attr('alt') + "<br/>" +           // the .attr('selector') grabs the specific attribute of the selector
+                        "Height: " + $('img').attr('height') + "<br/>" +
+                        "Width: " + $('img').attr('width'));
+
+
+                  $('a').click(function (event) {
+                        alert("Thanks for visiting!");
+                        //event.preventDefault();             // .preventDefault() prevents the event from happening - in this case the alert
+                  });
             });
+
       </script>
 </body>
 
