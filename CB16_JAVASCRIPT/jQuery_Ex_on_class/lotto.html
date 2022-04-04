@@ -27,34 +27,79 @@
       </div>
 
       <script>
-
             $(document).ready(function () {
 
-                  $('#generate').on('click', () => {
-                        const numbers = [];
-                        for (let i = 0; i < 6; i++) {
-                              var randNum = Math.floor(Math.random() * 49) + 1;
-                              if (numbers.indexOf(randNum) == -1) {
-                                    numbers.push(randNum);
-                              } else {
-                                    i--;
+                        $('#generate').on('click', () => {
+                              const numbers = [];
+                              for (let i = 0; i < 6; i++) {
+                                    var randNum = Math.floor(Math.random() * 49) + 1;
+                                    if (numbers.indexOf(randNum) == -1) {
+                                          numbers.push(randNum);
+                                    } else {
+                                          i--;
+                                    };
                               };
-                        };
 
-                        $('#winNums').html("The Winning Numbers are : " + numbers[0] + " - " + numbers[1] + " - " + numbers[2] +
-                              " - " + numbers[3] + " - " + numbers[4] + " - " + numbers[5] + " !");
+                              $('#winNums').html("The Winning Numbers are : " + numbers[0] + " - " + numbers[1] + " - " + numbers[2] +
+                                    " - " + numbers[3] + " - " + numbers[4] + " - " + numbers[5] + " !");
 
-                        $('#winNums').css({
-                              'color': 'blue',
-                              'font-size': '3em'
+                              $('#winNums').css({
+                                    'color': 'blue',
+                                    'font-size': '3em'
+                              });
                         });
+
+                        $('h1, h2').css({ 'color': 'blue' });
+                        $('p').css({ 'color': 'red' });
+                        $('img').css({ 'height': '250px', 'width': '400px' });
                   });
 
-                  $('h1, h2').css({ 'color': 'blue' });
-                  $('p').css({ 'color': 'red' });
-                  $('img').css({ 'height': '250px', 'width': '400px' });
-            });
 
+            //Second way without the indexOf using functions
+           
+            // const numbers = [];
+            // $(document).ready(function () {
+
+            //       $('#generate').on('click', () => {
+
+            //             function randNum(array) {
+            //                   for (let i = 0; i < 6; i++) {
+            //                         var x = Math.floor(Math.random() * 49) + 1;
+            //                         array.push(x);
+            //                   };
+            //             };
+            //             randNum(numbers);
+
+            //             function chkForDoubles(x) {
+            //                   for (let i = 0; i < x.length; i++) {
+            //                         for (let j = 0; j < i; j++) {
+            //                               if (x[i] === x[j]) {
+            //                                     return false;
+            //                               };
+            //                         };
+            //                   };
+            //                   return true;
+            //             };
+
+            //             function uniNum() {
+            //                   do {
+            //                         numbers.chkForDoubles();
+            //                   } while (chkForDoubles(numbers) == true);
+            //             };
+
+            //             $('#winNums').html("The Winning Numbers are : " + numbers[0] + " - " + numbers[1] + " - " + numbers[2] +
+            //                   " - " + numbers[3] + " - " + numbers[4] + " - " + numbers[5] + " !");
+
+            //             $('#winNums').css({
+            //                   'color': 'blue',
+            //                   'font-size': '3em'
+            //             });
+
+            //       });
+            //       $('h1, h2').css({ 'color': 'blue' });
+            //       $('p').css({ 'color': 'red' });
+            //       $('img').css({ 'height': '250px', 'width': '400px' });
+            // });
       </script>
 </body>
 

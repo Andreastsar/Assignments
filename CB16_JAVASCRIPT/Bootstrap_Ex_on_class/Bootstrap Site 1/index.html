@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+      <!--Without the initial-scale=1.0 site won't appear ok in every device (phone,tablet,laptop etc.)-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <title>Bootstrap Framework Site 1</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+      <div id="container">
+            <header class="jumbotron text-center">
+                  <h1>Bootstrap Basics App</h1>
+                  <p>Designing Responsive Web Sites</p>
+            </header>
+
+
+            <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                        <ul class="navbar-nav">
+                              <li class="nav-item">
+                                    <a href="index.html" class="nav-link">Home</a>
+                              </li>
+                              <li class="nav-item">
+                                    <a href="forms.html" class="nav-link">Forms</a>
+                              </li>
+                              <li class="nav-item">
+                                    <a href="students.html" class="nav-link">Students</a>
+                              </li>
+                        </ul>
+                  </div>
+
+            </nav>
+            <!--End of Navigation Bar-->
+
+            <div class="row">
+                  <div class="col-lg-12">
+                        <h2>Example 1 - (3 - 3 - 3 - 3) Large Column Grid</h2>
+                  </div>
+            </div>
+            <div class="row">
+                  <div class="col-lg-3">
+                        <h3>1st Column</h3>
+                        <p>The 'lg' class will reach sooner the 992px breakpoint and stacl the columns one over the
+                              other.</p>
+                  </div>
+                  <div class="col-lg-3">
+                        <h3>2nd Column</h3>
+                        <p>If we write only the 'col' , the columns will be split equally.</p>
+                  </div>
+                  <div class="col-lg-3">
+                        <h3>3rd Column</h3>
+                        <p>It's always a good idea to test both 'container' and 'container-fluid' classes.</p>
+                  </div>
+                  <div class="col-lg-3">
+                        <h3>4th Column</h3>
+                        <p>The size we choose depends on the device that we want to target for our application's users.
+                        </p>
+                  </div>
+            </div>
+            <hr />
+
+            <div class="row">
+                  <div class="col-sm">
+                        <h2>Example 2 - (8 - 4) Small Column Grid</h2>
+                  </div>
+            </div>
+            <div class="row">
+                  <div class="col-sm-4 col-md-6">
+                        <h3>1st Column</h3>
+                        <p><strong>Main Content:</strong> In 8-grid column layout the 'sm' means that the 8 columns
+                              start
+                              over 576px to appear next to each other.</p>
+                  </div>
+                  <div class="col-sm-8 col-md-6">
+                        <h3>2nd Column</h3>
+                        <p><strong>Sidebar Content:</strong> The right sidebar is often used for advertisment space.</p>
+                  </div>
+            </div>
+
+
+
+            <footer class="jumbotron text-center">
+                  Copyright &copy; 2022 Tsarouchas Andreas
+            </footer>
+      </div>
+      <!--End of Bootstrap Container-->
+</body>
+
+</html>
