@@ -8,7 +8,8 @@ public class Main {
         int sum = x + y;
 
         // Variables can't start with number f.e. 2x
-        int $k = 15;
+        //int 2k = 15;
+
         System.out.println("The sum is : " + (sum * vat));
     }
 
