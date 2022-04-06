@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,11 +12,12 @@
             integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
             crossorigin="anonymous"></script>
 </head>
+
 <body>
       <div id="container">
             <header class="jumbotron text-center">
                   <h1>Welcome to the 2022 Coding Bootcamp</h1>
-                  <h4>Explore a variety of courses, choose your own trainer and live an amazing experience!</h4><br/>
+                  <h4>Explore a variety of courses, choose your own trainer and live an amazing experience!</h4><br />
                   <p><strong>Welcome to the Developers Community!</strong></p>
             </header>
 
@@ -46,8 +48,92 @@
             </nav>
             <!--End of Navigation Bar-->
 
+            <div class="jumbotron text-center" id="register">
+                  <h3>Register for a Course</h3>
+            </div><br />
+
+            <div class="row">
+                  <div class="col-lg-5 offset-lg-1 my-5">
+                        <p class="bg-success"><strong>Please register for a Course:</strong></strong></p>
+                        <form action="">
+                              <div class="form-group">
+                                    <label for="title">Title:</label>
+                                    <select name="title" id="title">
+                                          <option value="coding-bootcamp">Coding Bootcamp</option>
+                                    </select>
+                              </div>
+                              <div class="form-group">
+                                    <label for="stream">Stream:</label>
+                                    <select name="stream" id="stream" required>
+                                          <option value="css">C#</option>
+                                          <option value="java">Java</option>
+                                          <option value="javaScript">JavaScript</option>
+                                          <option value="bootstrap">Bootstrap</option>
+                                    </select>
+                              </div>
+                              <div class="form-group">
+                                    <label for="type">Type:</label>
+                                    <input type="radio" name="type" id="part-time" value="Part-time">
+                                    <label for="part-time">Part-time</label>
+                                    <input type="radio" name="type" id="full-time" value="Full-time">
+                                    <label for="full-time">Full-time</label>
+                              </div>
+                              <div class="form-group">
+                                    <label for="date-of-start">Date of Start:</label>
+                                    <input type="date" class="form-control" id="date-start" name="date-of-start">
+                              </div>
+                              <div class="form-group">
+                                    <label for="date-of-end">Date of End:</label>
+                                    <input type="date" class="form-control" id="date-end" name="date-of-end">
+                              </div><br/>
+                              <button type="submit" class="btn btn-success">Add</button>
+                        </form>
+                  </div>
+
+                  <!--Edit form-->
+                  <div class="col-lg-5 my-5">
+                        <p class="bg-success"><strong>Please register for a Course:</strong></strong></p>
+                        <form action="">
+                              <div class="form-group">
+                                    <label for="title">Title:</label>
+                                    <select name="title" id="title2">
+                                          <option value="coding-bootcamp">Coding Bootcamp</option>
+                                    </select>
+                              </div>
+                              <div class="form-group">
+                                    <label for="stream">Stream:</label>
+                                    <select name="stream" id="stream2" required>
+                                          <option value="css">C#</option>
+                                          <option value="java">Java</option>
+                                          <option value="javaScript">JavaScript</option>
+                                          <option value="bootstrap">Bootstrap</option>
+                                    </select>
+                              </div>
+                              <div class="form-group">
+                                    <label for="type">Type:</label>
+                                    <input type="radio" name="type" id="part-time2" value="Part-time">
+                                    <label for="part-time">Part-time</label>
+                                    <input type="radio" name="type" id="full-time2" value="Full-time">
+                                    <label for="full-time">Full-time</label>
+                              </div>
+                              <div class="form-group">
+                                    <label for="date-of-start">Date of Start:</label>
+                                    <input type="date" class="form-control" id="date-start2" name="date-of-start">
+                              </div>
+                              <div class="form-group">
+                                    <label for="date-of-end">Date of End:</label>
+                                    <input type="date" class="form-control" id="date-end2" name="date-of-end">
+                              </div><br/>
+                              <button type="submit" class="btn btn-success">Edit</button>
+                        </form>
+                  </div>
+            </div>
+
             <footer class="jumbotron text-center">
                   Copyright &copy; 2022 Tsarouchas Andreas
             </footer>
+
+            
 </body>
+
 </html>
