@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>jQuery Ex 6</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+      <h1>jQuery Ex 6 - Registration Form Validation</h1>
+      <form action="" id="registration">
+            <div>
+                  <label for="first-name">First name:</label>
+                  <input type="text" name="first-name" id="first-name"><br />
+                  <span class="error_form" id="fname_error_message"></span>
+            </div>
+            <div>
+                  <label for="last-name">Last name:</label>
+                  <input type="text" name="last-name" id="last-name">
+                  <span class="error_form" id="lname_error_message"></span>
+            </div>
+            <div>
+                  <label for="email">Email:</label>
+                  <input type="email" name="email" id="email" required>
+                  <span class="error_form" id="email_error_message"></span>
+            </div>
+            <div>
+                  <label for="password">Password</label>
+                  <input type="password" name="password" id="password">
+                  <span class="error_form" id="password_error_message"></span>
+            </div>
+
+            <button type="submit">Submit Form</button>
+      </form>
+
+      <script>
+            $(document).ready(function () {
+
+                  $('#fname_error_message').hide();
+                  $('#lname_error_message').hide();
+                  $('#email_error_message').hide();
+                  $('#password_error_message').hide();
+
+                  var error_fname = false;
+                  var error_lname = false;
+                  var error_email = false;
+                  var error_password = false;
+
+                  $('#first-name').focusout(function () {
+                        checkFirstName();
+                  });
+                  $('#last-name').focusout(function () {
+                        checkLastName();
+                  });
+                  $('#email').focusout(function () {
+                        checkEmail();
+                  });
+                  $('#password').focusout(function () {
+                        checkPassword();
+                  });
+
+                  function checkFirstName() {
+                        var pattern = /^[a-zA-Z]*$/;
+                        var firstName = $("#first-name").val();
+                        if (pattern.test(firstName) && firstName !== "") {
+                              $("#fname_error_message").hide();
+                              $("#first-name").css("border-bottom", "2px solid #34F458");
+                              error_fname = false;
+                        } else {
+                              $("#fname_error_message").html("Should contain only Characters");
+                              $("#fname_error_message").show();
+                              $("#first-name").css("border-bottom", "2px solid #F90A0A");
+                              error_fname = true;
+                        };
+                  };
+
+                  function checkLastName() {
+                        var pattern = /^[a-zA-Z]*$/;
+                        var lastName = $("#last-name").val();
+                        if (pattern.test(lastName) && lastName !== "") {
+                              $("#lname_error_message").hide();
+                              $("#last-name").css("border-bottom", "2px solid #34F458");
+                              error_lname = false;
+                        } else {
+                              $("#lname_error_message").html("Should contain only Characters");
+                              $("#lname_error_message").show();
+                              $("#last-name").css("border-bottom", "2px solid #F90A0A");
+                              error_lname = true;
+                        };
+                  };
+
+                  function checkEmail() {
+                        var pattern = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+                        var email = $('#email').val();
+                        if (pattern.test(email) && email != '') {
+                              $("#email_error_message").hide();
+                              $("#email").css("border-bottom", "2px solid #34F458");
+                              error_email = false;
+                        } else {
+                              $("#email_error_message").html("Invalid email!");
+                              $("#email_error_message").show();
+                              $("#email").css("border-bottom", "2px solid #F90A0A");
+                              error_email = true;
+                        };
+                  };
+
+                  function checkPassword() {
+                        var password_length = $('#password').val().length;
+                        if (password_length < 8) {
+                              $("#password_error_message").html("Password must be at least 8 characters");
+                              $("#password_error_message").show();
+                              $("#password").css("border-bottom", "2px solid #F90A0A");
+                              error_password = false;
+                        };
+                  };
+
+                  // check on Submit --> function if all fields are successfully filled after pressing the submit button
+                  $("#registration").submit(function () {
+                        checkFirstName();
+                        checkLastName();
+                        checkEmail();
+                        checkPassword();
+
+                        if (error_fname === false && error_lname === false && error_email === false
+                              && error_password === false) {
+                              alert("Registration Successfull");
+                              return true; // proceed with submit
+                        } else {
+                              alert("Please Fill the form Correctly");
+                              return false;
+                        };
+                  });
+            });
+      </script>
+</body>
+
+</html>

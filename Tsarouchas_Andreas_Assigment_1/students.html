@@ -5,7 +5,7 @@
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Document</title>
+      <title>Form for Students</title>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
@@ -30,10 +30,10 @@
                               <li class="nav-item">
                                     <a href="index.html" class="nav-link">Home</a>
                               </li>
-                              <li class="nav-item">
+                              <li class="nav-item active">
                                     <a href="students.html" class="nav-link">Students</a>
                               </li>
-                              <li class="nav-item active">
+                              <li class="nav-item">
                                     <a href="trainers.html" class="nav-link">Trainers</a>
                               </li>
                               <li class="nav-item">
@@ -50,7 +50,7 @@
 
             <div class="row">
                   <div class="col-lg-5 offset-lg-1 my-5">
-                        <p class="bg-danger"><strong>Please fill the from below:</strong></p>
+                        <p class="bg-info"><strong>Please fill the from below:</strong></p>
                         <form action="">
                               <!--Every time you place a field we need div class form-group to wrap the labels-->
                               <div class="form-group">
@@ -67,49 +67,57 @@
                                     <div class="alert alert-danger" id="lastname-error">Success or Failure</div>
                               </div>
                               <div class="form-group">
-                                    <label for="subject">Subject:</label>
-                                    <input type="text" class="form-control" name="subject" id="subject" required>
-                                    <p>(You can choose: Java, JavaScript, CSS, Bootstrap)</p>
-                                    <div class="alert alert-danger" id="subject-error">Success or Failure</div>
+                                    <label for="date-of-birth">Date of Birth:</label>
+                                    <input type="date" class="form-control" id="date-of-birth" name="date-ofbirth">
+                              </div>
+                              <div class="form-group">
+                                    <label for="tuition-fees">Tuition Fees:</label>
+                                    <input type="number" class="form-control" id="tuition-fees" name="tuition-fees"
+                                          min="1" required>
+                                    <div class="alert alert-danger" id="tuition-error">Success or Failure</div>
                               </div>
                               <div class="form-check mb-2 mr-sm-2 mb-sm-0">
                                     <label class="form-check-label">
                                           <input class="form-check-input" type="checkbox"> Remember me
                                     </label>
                               </div><br />
-                              <button type="submit" class="btn btn-danger">Add</button>
+                              <button type="submit" class="btn btn-info">Add</button>
                         </form>
                   </div>
 
                   <div class="col-lg-5 my-5">
-                        <p class="bg-danger"><strong>Please fill the from below:</strong></p>
+                        <p class="bg-info"><strong>Please fill the from below:</strong></p>
                         <form action="">
                               <!--Every time you place a field we need div class form-group to wrap the labels-->
                               <div class="form-group">
                                     <label for="firstname">First Name:</label>
                                     <input type="text" class="form-control" name="firstname" id="firstname2"
-                                          required><br />
+                                          value="Jane" required><br />
                                     <div class="alert alert-danger" id="firstname-error2">Success or Failure</div>
-                                    <!--Error message-->
                               </div>
                               <div class="form-group">
                                     <label for="lastname">Last Name:</label>
-                                    <input type="text" class="form-control" name="lastname" id="lastname2"
+                                    <input type="text" class="form-control" name="lastname" id="lastname2" value="Doe"
                                           required><br />
                                     <div class="alert alert-danger" id="lastname-error2">Success or Failure</div>
                               </div>
                               <div class="form-group">
-                                    <label for="subject">Subject:</label>
-                                    <input type="text" class="form-control" name="subject" id="subject2" required>
-                                    <p>(You can choose: Java, JavaScript, CSS, Bootstrap)</p>
-                                    <div class="alert alert-danger" id="subject-error2">Success or Failure</div>
+                                    <label for="date-of-birth">Date of Birth:</label>
+                                    <input type="date" class="form-control" id="date-of-birth2" name="date-ofbirth"
+                                          value="1998-04-23">
+                              </div>
+                              <div class="form-group">
+                                    <label for="tuition-fees">Tuition Fees:</label>
+                                    <input type="number" class="form-control" id="tuition-fees2" name="tuition-fees"
+                                          min="1" value="600" required>
+                                    <div class="alert alert-danger" id="tuition-error2">Success or Failure</div>
                               </div>
                               <div class="form-check mb-2 mr-sm-2 mb-sm-0">
                                     <label class="form-check-label">
                                           <input class="form-check-input" type="checkbox"> Remember me
                                     </label>
                               </div><br />
-                              <button type="submit" class="btn btn-danger">Add</button>
+                              <button type="submit" class="btn btn-info">Edit</button>
                         </form>
                   </div>
             </div>
@@ -134,12 +142,11 @@
                         $('#lastname').focusout(() => {
                               checkLastName();
                         });
-                        $('#subject-error').hide();
-                        var error_subject = "";
-                        $('#subject').focusout(() => {
-                              checkSubject();
+                        $('#tuition-error').hide();
+                        var error_tuition = "";
+                        $('#tuition-fees').focusout(() => {
+                              checkTuition();
                         });
-
 
                         //Validation for the edit Form
                         $('#firstname-error2').hide();
@@ -152,16 +159,16 @@
                         $('#lastname2').focusout(() => {
                               checkLastNameEdit();
                         });
-                        $('#subject-error2').hide();
-                        var error_subject = "";
-                        $('#subject2').focusout(() => {
-                              checkSubjectEdit();
+                        $('#tuition-error2').hide();
+                        var error_tuition = "";
+                        $('#tuition-fees2').focusout(() => {
+                              checkTuitionEdit();
                         });
 
-
                         function checkFirstName() {
-                              var pattern = /^[a-zA-Z]*$/;
-                              var firstname = $('#firstname').val();
+                              // REGULAR EXPRESSIONS FOR VALIDATE
+                              var pattern = /^[a-zA-Z]*$/;  // checks if all input are chars from a-z and from A-Z
+                              var firstname = $('#firstname').val();     // the value of firstname tag
                               console.log(firstname);
                               if (pattern.test(firstname) && (firstname !== '')) {
                                     $('#firstname-error').hide();
@@ -176,8 +183,9 @@
                         };
 
                         function checkLastName() {
-                              var pattern = /^[a-zA-Z]*$/;
-                              var lastname = $('#lastname').val();
+                              // REGULAR EXPRESSIONS FOR VALIDATE
+                              var pattern = /^[a-zA-Z]*$/;  // checks if all input are chars from a-z and from A-Z
+                              var lastname = $('#lastname').val();     // the value of the input with id="lastname"
                               console.log(lastname);
                               if (pattern.test(lastname) && (lastname !== '')) {
                                     $('#lastname-error').hide();
@@ -191,25 +199,26 @@
                               };
                         };
 
-                        function checkSubject() {
-                              var pattern = /Java|JavaScript|CSS|Bootstrap/;
-                              var subject = $('#subject').val();
-                              console.log(subject);
-                              if (pattern.test(subject) && (subject !== '')) {
-                                    $('#subject-error').hide();
-                                    $('#subject').css({ "border": "2px solid #00ff00" });
-                                    $('input[type=text]').val(function () {
-                                          return this.value.toUpperCase();
+                        function checkTuition() {
+                              var pattern = /[0-9]/;
+                              var tuitionFee = $('#tuition-fees').val();
+                              console.log(tuitionFee);
+                              if (pattern.test(tuitionFee) && (tuitionFee !== '')) {
+                                    $('#tuition-error').hide();
+                                    $('#tuition-fees').css({ "border": "2px solid #00ff00" });
+                                    $('input[type=number]').val(function () {
+                                          return this.value;
                                     });
                               } else {
-                                    $('#subject-error').show().html("Should contain only: Java, JavaScript, CSS, Bootstrap");
-                                    error_fname = 'true';
+                                    $('#tuition-error').show().html("Should contain numbers 0-9!");
+                                    error_tuition = 'true';
                               };
                         };
 
                         function checkFirstNameEdit() {
-                              var pattern = /^[a-zA-Z]*$/;
-                              var firstname = $('#firstname2').val();
+                              // REGULAR EXPRESSIONS FOR VALIDATE
+                              var pattern = /^[a-zA-Z]*$/;  // checks if all input are chars from a-z and from A-Z
+                              var firstname = $('#firstname2').val();     // the value of firstname tag
                               console.log(firstname);
                               if (pattern.test(firstname) && (firstname !== '')) {
                                     $('#firstname-error2').hide();
@@ -224,8 +233,9 @@
                         };
 
                         function checkLastNameEdit() {
-                              var pattern = /^[a-zA-Z]*$/;
-                              var lastname = $('#lastname2').val();
+                              // REGULAR EXPRESSIONS FOR VALIDATE
+                              var pattern = /^[a-zA-Z]*$/;  // checks if all input are chars from a-z and from A-Z
+                              var lastname = $('#lastname2').val();     // the value of the input with id="lastname"
                               console.log(lastname);
                               if (pattern.test(lastname) && (lastname !== '')) {
                                     $('#lastname-error2').hide();
@@ -239,29 +249,24 @@
                               };
                         };
 
-                        function checkSubjectEdit() {
-                              var pattern = /Java|JavaScript|CSS|Bootstrap/;
-                              var subject = $('#subject2').val();
-                              console.log(subject);
-                              if (pattern.test(subject) && (subject !== '')) {
-                                    $('#subject-error2').hide();
-                                    $('#subject2').css({ "border": "2px solid #00ff00" });
-                                    $('input[type=text]').val(function () {
-                                          return this.value.toUpperCase();
+                        function checkTuitionEdit() {
+                              var pattern = new RegExp("[0-9]");
+                              var tuitionFee = $('#tuition-fees2').val();
+                              console.log(tuitionFee);
+                              if (pattern.test(tuitionFee) && (tuitionFee !== '')) {
+                                    $('#tuition-error2').hide();
+                                    $('#tuition-fees2').css({ "border": "2px solid #00ff00" });
+                                    $('input[type=number]').val(function () {
+                                          return this.value;
                                     });
                               } else {
-                                    $('#subject-error2').show().html("Should contain only: Java, JavaScript, CSS, Bootstrap");
-                                    error_fname = 'true';
+                                    $('#tuition-error2').show().html("Should contain numbers 0-9!");
+                                    error_tuition = 'true';
                               };
                         };
-
-
                   });
             </script>
 
-            <footer class="jumbotron text-center">
-                  Copyright &copy; 2022 Tsarouchas Andreas
-            </footer>
 </body>
 
 </html>
