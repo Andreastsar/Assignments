@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Assignments</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+            crossorigin="anonymous"></script>
+</head>
+
+<body>
+      <div id="container">
+            <header class="jumbotron text-center">
+                  <h1>Welcome to the 2022 Coding Bootcamp</h1>
+                  <h4>Explore a variety of courses, choose your own trainer and live an amazing experience!</h4><br />
+                  <p><strong>Welcome to the Developers Community!</strong></p>
+            </header>
+
+            <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                        <ul class="navbar-nav">
+                              <li class="nav-item">
+                                    <a href="index.html" class="nav-link">Home</a>
+                              </li>
+                              <li class="nav-item">
+                                    <a href="students.html" class="nav-link">Students</a>
+                              </li>
+                              <li class="nav-item">
+                                    <a href="trainers.html" class="nav-link">Trainers</a>
+                              </li>
+                              <li class="nav-item">
+                                    <a href="courses.html" class="nav-link">Courses</a>
+                              </li>
+                              <li class="nav-item active">
+                                    <a href="assignments.html" class="nav-link">Assignments</a>
+                              </li>
+                              <li class="nav-item">
+                                    <a href="assignments_per_course.html" class="nav-link">Assignments/Course</a>
+                              </li>
+                        </ul>
+                  </div>
+
+            </nav>
+            <!--End of Navigation Bar-->
+
+            <div class="jumbotron text-center" id="register">
+                  <h3>Register for an Assignment</h3>
+            </div><br />
+
+            <div class="row">
+                  <div class="col-lg-5 offset-lg-1 my-5">
+                        <p class="bg-warning"><strong>Please register for your Assignment: (*Required*)</strong></strong></p>
+                        <form action="">
+                              <label for="title"><strong>*</strong> Title : </label>
+                              <input type="text" name="title" id="title" required><br />
+                              <p>(You can choose Java, JS, CSS)</p>
+                              <div class="alert alert-danger" id="title-error"></div>
+                              <label for="description"><strong>*</strong> Description : </label>
+                              <select name="description" id="description" required>
+                                    <option value="pick">Pick</option>
+                                    <option value="full">Full-time</option>
+                                    <option value="part">Part-time</option>
+                              </select>
+                              <div class="alert alert-danger" id="description-error"></div>
+                              <div class="form-group">
+                                    <label for="date-of-submit">Date of Submission:</label>
+                                    <input type="date" class="form-control" id="date-of-submit" name="date-of-submit">
+                              </div>
+                              <div class="form-group">
+                                    <label for="oralMark"><strong>*</strong> Oral Mark (1-30) : </label>
+                                    <input type="text" class="form-control" name="oralMark" id="oralMark" min="1"
+                                          max="30" required><br />
+                                    <div class="alert alert-danger" id="oral-error">Success or Failure</div>
+                              </div>
+                              <div class="form-group">
+                                    <label for="totalMark"><strong>*</strong> Total Mark (1-70) : </label>
+                                    <input type="text" class="form-control" name="totalMark" id="totalMark" min="1"
+                                          max="70" required><br />
+                                    <div class="alert alert-danger" id="total-error">Success or Failure</div>
+                              </div>
+                        </form>
+                        <button type="submit" class="btn btn-warning">Add</button>
+                  </div>
+
+                  <!--Edit Form-->
+
+                  <div class="col-lg-5 my-5">
+                        <p class="bg-warning"><strong>Please register for your Assignment: (*Required*)</strong></strong></p>
+                        <form action="">
+                              <label for="title"><strong>*</strong> Title : </label>
+                              <input type="text" name="title" id="title2" value="CSS" required><br />
+                              <p>(You can choose Java, JS, CSS)</p>
+                              <div class="alert alert-danger" id="title-error2"></div>
+                              <label for="description"><strong>*</strong> Description : </label>
+                              <select name="description" id="description2" required>
+                                    <option value="pick">Pick</option>
+                                    <option value="full">Full-time</option>
+                                    <option value="part2">Part-time</option>
+                              </select>
+                              <div class="alert alert-danger" id="description-error2"></div>
+                              <div class="form-group">
+                                    <label for="date-of-submit">Date of Submission:</label>
+                                    <input type="date" class="form-control" id="date-of-submit2" name="date-of-submit" value="2022-09-12">
+                              </div>
+                              <div class="form-group">
+                                    <label for="oralMark"><strong>*</strong> Oral Mark (1-30) : </label>
+                                    <input type="text" class="form-control" name="oralMark" id="oralMark2" min="1"
+                                          max="30" value="19" required><br />
+                                    <div class="alert alert-danger" id="oral-error2">Success or Failure</div>
+                              </div>
+                              <div class="form-group">
+                                    <label for="totalMark"><strong>*</strong> Total Mark (1-70) : </label>
+                                    <input type="text" class="form-control" name="totalMark" id="totalMark2" min="1"
+                                          max="70" value="39" required><br />
+                                    <div class="alert alert-danger" id="total-error2">Success or Failure</div>
+                              </div>
+                        </form>
+                        <button type="submit" class="btn btn-warning">Edit</button>
+                  </div>
+            </div>
+
+            <footer class="jumbotron text-center">
+                  Copyright &copy; 2022 Tsarouchas Andreas
+            </footer>
+
+            <script>
+                  $(document).ready(function () {
+
+                        var title_error = '';
+                        var oral_error = '';
+                        var total_error = '';
+                        var description_error = '';
+                        $('option[value="part2"]').attr('selected', 'selected');
+
+                        $('#title-error').hide();
+                        $('#total-error').hide();
+                        $('#oral-error').hide();
+                        $('#description-error').hide();
+
+                        $('#title').focusout(() => {
+                              checkTitle();
+                        });
+                        $('#oralMark').focusout(() => {
+                              checkOralMark();
+                        });
+                        $('#totalMark').focusout(() => {
+                              checkTotalMark();
+                        });
+                        $('#description').change(() => {
+                              checkDescription();
+                        });
+
+
+                        function checkDescription() {
+                              var pattern = /full|part2/;
+                              var type = $('#description').val();
+                              if (pattern.test(type)) {
+                                    $('#description-error').hide();
+                                    $('#description').css({ "color": "green" });
+                                    return this.value;
+                              } else {
+                                    $('#description-error').show().html("Please select Part or Full time!");
+                                    $('#description').css({ "color": "red" });
+                                    var error_ass = true;
+                              };
+                        };
+
+                        function checkTitle() {
+                              var pattern = /Java|JS|CSS/;
+                              var title = $('#title').val();
+                              if (pattern.test(title)) {
+                                    $('#title-error').hide();
+                                    $('#title').css({ "border": "2px solid #00ff00" });
+                                    return this.value;
+                              }else {
+                                    $('#title-error').show().html("Should contain Java, JS, CSS");
+                                    description_error = 'true';
+                              }
+                        }
+
+                        function checkTotalMark() {
+                              var pattern = /[0-9]/;
+                              var total = $('#totalMark').val();
+                              console.log(total);
+                              if (pattern.test(total) && (total <= 70)) {
+                                    $('#total-error').hide();
+                                    $('#totalMark').css({ "border": "2px solid #00ff00" });
+                                    $('input[type=number]').val(function () {
+                                          return this.value;
+                                    });
+                              } else {
+                                    $('#total-error').show().html("Should contain Grade: 1-70 !");
+                                    error_total = 'true';
+                              };
+                        };
+
+                        function checkOralMark() {
+                              var pattern = /[0-9]/;
+                              var oral = $('#oralMark').val();
+                              console.log(oral);
+                              if (pattern.test(oral) && (oral <= 30)) {
+                                    $('#oral-error').hide();
+                                    $('#oralMark').css({ "border": "2px solid #00ff00" });
+                                    $('input[type=number]').val(function () {
+                                          return this.value;
+                                    });
+                              } else {
+                                    $('#oral-error').show().html("Should contain Grade: 1-30 !");
+                                    error_oral = 'true';
+                              };
+                        };
+
+                        //Validation for Edit Form
+
+                        var title_error2 = '';
+                        var oral_error2 = '';
+                        var total_error2 = '';
+                        var description_error2 = '';
+
+                        $('#title-error2').hide();
+                        $('#total-error2').hide();
+                        $('#oral-error2').hide();
+                        $('#description-error2').hide();
+
+                        $('#title2').focusout(() => {
+                              checkTitle2();
+                        });
+                        $('#oralMark2').focusout(() => {
+                              checkOralMark2();
+                        });
+                        $('#totalMark2').focusout(() => {
+                              checkTotalMark2();
+                        });
+                        $('#description2').change(() => {
+                              checkDescription2();
+                        })
+
+                        function checkDescription2() {
+                              var pattern = /full|part/;
+                              var type = $('#description2').val();
+                              if (pattern.test(type)) {
+                                    $('#description-error2').hide();
+                                    $('#description2').css({ "color": "green" });
+                                    return this.value;
+                              } else {
+                                    $('#description-error2').show().html("Please select Part or Full time!");
+                                    $('#description2').css({ "color": "red" });
+                                    var error_ass2 = true;
+                              };
+                        };
+
+                        function checkTitle2() {
+                              var pattern = /Java|JS|CSS/;
+                              var title = $('#title2').val();
+                              if (pattern.test(title)) {
+                                    $('#title-error2').hide();
+                                    $('#title2').css({ "border": "2px solid #00ff00" });
+                                    return this.value;
+                              }else {
+                                    $('#title-error2').show().html("Should contain Java, JS, CSS");
+                                    description_error2 = 'true';
+                              }
+                        }
+
+                        function checkTotalMark2() {
+                              var pattern = /[0-9]/;
+                              var total = $('#totalMark2').val();
+                              console.log(total);
+                              if (pattern.test(total) && (total <= 70)) {
+                                    $('#total-error2').hide();
+                                    $('#totalMark2').css({ "border": "2px solid #00ff00" });
+                                    $('input[type=number]').val(function () {
+                                          return this.value;
+                                    });
+                              } else {
+                                    $('#total-error2').show().html("Should contain Grade: 1-70 !");
+                                    error_total = 'true';
+                              };
+                        };
+
+                        function checkOralMark2() {
+                              var pattern = /[0-9]/;
+                              var oral = $('#oralMark2').val();
+                              console.log(oral);
+                              if (pattern.test(oral) && (oral <= 30)) {
+                                    $('#oral-error2').hide();
+                                    $('#oralMark2').css({ "border": "2px solid #00ff00" });
+                                    $('input[type=number]').val(function () {
+                                          return this.value;
+                                    });
+                              } else {
+                                    $('#oral-error2').show().html("Should contain Grade: 1-30 !");
+                                    error_oral2 = 'true';
+                              };
+                        };
+
+                  });
+            </script>
+</body>
+
+</html>
