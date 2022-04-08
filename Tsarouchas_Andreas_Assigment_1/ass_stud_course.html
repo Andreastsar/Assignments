@@ -42,7 +42,7 @@
                               <li class="nav-item">
                                     <a href="assignments.html" class="nav-link">Assignments</a>
                               </li>
-                              <li class="nav-item active">
+                              <li class="nav-item">
                                     <a href="assignments_per_course.html" class="nav-link">Assignments/Course</a>
                               </li>
                               <li class="nav-item">
@@ -51,7 +51,7 @@
                               <li class="nav-item">
                                     <a href="trainers_per_course.html" class="nav-link">Trainers/Course</a>
                               </li>
-                              <li class="nav-item">
+                              <li class="nav-item active">
                                     <a href="ass_stud_course.html" class="nav-link">Assignments/Student/Course</a>
                               </li>
                         </ul>
@@ -79,24 +79,24 @@
                                     <label for="java-type">Assignment : </label>
                                     <select name="java-type" id="java-type" required>
                                           <option value="pick">Pick an Assignment</option>
-                                          <option value="javaPart">Java Assignment for Part-time</option>
-                                          <option value="javaFull">Java Assignment for Full-time</option>
+                                          <option value="javaPart">Java Part-time</option>
+                                          <option value="javaFull">Java Full-time</option>
                                     </select>
                               </div>
                               <div class="form-group" id="js-hidden">
                                     <label for="js-type">Assignment : </label>
                                     <select name="js-type" id="js-type" required>
                                           <option value="pick">Pick an Assignment</option>
-                                          <option value="jsPart">JavaScript Assignment for Part-time</option>
-                                          <option value="jsFull">JavaScript Assignment for Full-time</option>
+                                          <option value="jsPart">JavaScript Part-time</option>
+                                          <option value="jsFull">JavaScript Full-time</option>
                                     </select>
                               </div>
                               <div class="form-group" id="bootstrap-hidden">
                                     <label for="bootstrap-type">Assignment : </label>
                                     <select name="bootstrap-type" id="bootstrap-type" required>
                                           <option value="pick">Pick an Assignment</option>
-                                          <option value="bootstrapPart">Bootstrap Assignment for Part-time</option>
-                                          <option value="bootstrapFull">Bootstrap Assignment for Full-time</option>
+                                          <option value="bootstrapPart">Bootstrap Part-time</option>
+                                          <option value="bootstrapFull">Bootstrap Full-time</option>
                                     </select>
                               </div>
                               <div class="alert alert-danger" id="type-error">Success or Failure</div>
@@ -135,24 +135,24 @@
                                     <label for="java-type">Assignment : </label>
                                     <select name="java-type" id="java-type2" required>
                                           <option value="pick">Pick an Assignment</option>
-                                          <option value="javaPart">Java Assignment for Part-time</option>
-                                          <option value="javaFull">Java Assignment for Full-time</option>
+                                          <option value="javaPart">Java Part-time</option>
+                                          <option value="javaFull">Java Full-time</option>
                                     </select>
                               </div>
                               <div class="form-group" id="js-hidden2">
                                     <label for="js-type">Assignment : </label>
                                     <select name="js-type" id="js-type2" required>
                                           <option value="pick">Pick an Assignment</option>
-                                          <option value="jsPart">JavaScript Assignment for Part-time</option>
-                                          <option value="jsFull">JavaScript Assignment for Full-time</option>
+                                          <option value="jsPart">JavaScript Part-time</option>
+                                          <option value="jsFull">JavaScript Full-time</option>
                                     </select>
                               </div>
                               <div class="form-group" id="bootstrap-hidden2">
                                     <label for="bootstrap-type">Assignment : </label>
                                     <select name="bootstrap-type" id="bootstrap-type2" required>
                                           <option value="pick">Pick an Assignment</option>
-                                          <option value="bootstrapPart">Bootstrap Assignment for Part-time</option>
-                                          <option value="bootstrapFull">Bootstrap Assignment for Full-time</option>
+                                          <option value="bootstrapPart">Bootstrap Part-time</option>
+                                          <option value="bootstrapFull">Bootstrap Full-time</option>
                                     </select>
                               </div>
                               <div class="alert alert-danger" id="type-error2">Success or Failure</div>
@@ -185,7 +185,7 @@
 
             <script>
                   $(document).ready(function () {
-                        checkType();
+
                         var error_type = '';
                         var error_ass = '';
                         var error_oral = '';

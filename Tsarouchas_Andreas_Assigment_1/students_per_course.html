@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Students Per Course</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+            crossorigin="anonymous"></script>
+</head>
+
+<body>
+      <div id="container">
+            <header class="jumbotron text-center">
+                  <h1>Welcome to the 2022 Coding Bootcamp</h1>
+                  <h4>Explore a variety of courses, choose your own trainer and live an amazing experience!</h4><br />
+                  <p><strong>Welcome to the Developers Community!</strong></p>
+            </header>
+
+            <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                        <ul class="navbar-nav">
+                              <li class="nav-item">
+                                    <a href="index.html" class="nav-link">Home</a>
+                              </li>
+                              <li class="nav-item">
+                                    <a href="students.html" class="nav-link">Students</a>
+                              </li>
+                              <li class="nav-item">
+                                    <a href="trainers.html" class="nav-link">Trainers</a>
+                              </li>
+                              <li class="nav-item">
+                                    <a href="courses.html" class="nav-link">Courses</a>
+                              </li>
+                              <li class="nav-item">
+                                    <a href="assignments.html" class="nav-link">Assignments</a>
+                              </li>
+                              <li class="nav-item">
+                                    <a href="assignments_per_course.html" class="nav-link">Assignments/Course</a>
+                              </li>
+                              <li class="nav-item active">
+                                    <a href="students_per_course.html" class="nav-link">Students/Course</a>
+                              </li>
+                              <li class="nav-item">
+                                    <a href="trainers_per_course.html" class="nav-link">Trainers/Course</a>
+                              </li>
+                              <li class="nav-item">
+                                    <a href="ass_stud_course.html" class="nav-link">Assignments/Student/Course</a>
+                              </li>
+                        </ul>
+                  </div>
+
+            </nav>
+            <!--End of Navigation Bar-->
+
+            <div class="jumbotron text-center" id="register">
+                  <h3>Welcome students! Please register to a course!</h3>
+            </div><br />
+
+            <div class="row">
+                  <div class="col-lg-5 offset-lg-1 my-5">
+                        <p class="bg-info"><strong>Please fill out the form below : (*Required*)</strong></strong>
+                        </p>
+                        <form action="">
+                              <label for="type"><strong>*</strong> Course : </label>
+                              <select name="type" id="type" required>
+                                    <option value="pick">Pick a Course</option>
+                                    <option value="java">Java</option>
+                                    <option value="javascript">JavaScript</option>
+                                    <option value="bootstrap">Bootstrap</option>
+                              </select>
+                              <div class="alert alert-danger" id="type-error">Success or Failure</div>
+
+                              <div class="form-group">
+                                    <label for="date-of-submit">Date of Register:</label>
+                                    <input type="date" class="form-control" id="date-of-submit" name="date-of-submit">
+                              </div>
+                              <div class="form-group">
+                                    <label for="fname"><strong>*</strong> First Name : </label>
+                                    <input type="text" class="form-control" name="fname" id="fname" required><br />
+                                    <div class="alert alert-danger" id="fname-error">Success or Failure</div>
+                              </div>
+                              <div class="form-group">
+                                    <label for="lname"><strong>*</strong> Last Name : </label>
+                                    <input type="text" class="form-control" name="lname" id="lname" required><br />
+                                    <div class="alert alert-danger" id="lname-error">Success or Failure</div>
+                              </div>
+                        </form>
+                        <button type="submit" class="btn btn-info">Add</button>
+                  </div>
+
+                  <!--Edit Form-->
+
+                  <div class="col-lg-5 my-5">
+                        <p class="bg-info"><strong>Please fill out the form below : (*Required*)</strong></strong>
+                        </p>
+                        <form action="">
+                              <label for="type2"><strong>*</strong> Course : </label>
+                              <select name="type2" id="type2" required>
+                                    <option value="pick">Pick a Course</option>
+                                    <option value="java">Java</option>
+                                    <option value="javascript2">JavaScript</option>
+                                    <option value="bootstrap">Bootstrap</option>
+                              </select>
+                              <div class="alert alert-danger" id="type-error2">Success or Failure</div>
+
+                              <div class="form-group">
+                                    <label for="date-of-submit2">Date of Register:</label>
+                                    <input type="date" class="form-control" id="date-of-submit2" name="date-of-submit2"
+                                          value="1642-12-25">
+                              </div>
+                              <div class="form-group">
+                                    <label for="fname2"><strong>*</strong> First Name : </label>
+                                    <input type="text" class="form-control" name="fname2" id="fname2" value="Isaac"
+                                          required><br />
+                                    <div class="alert alert-danger" id="fname-error2">Success or Failure</div>
+                              </div>
+                              <div class="form-group">
+                                    <label for="lname2"><strong>*</strong> Last Name : </label>
+                                    <input type="text" class="form-control" name="lname2" id="lname2" value="Newton"
+                                          required><br />
+                                    <div class="alert alert-danger" id="lname-error2">Success or Failure</div>
+                              </div>
+                        </form>
+                        <button type="submit" class="btn btn-info">Edit</button>
+                  </div>
+
+
+            </div>
+
+            <footer class="jumbotron text-center">
+                  Copyright &copy; 2022 Tsarouchas Andreas
+            </footer>
+
+            <script>
+                  $(document).ready(function () {
+                        $('option[value="javascript2"]').attr('selected', 'selected');
+                        var error_type = '';
+                        var error_fname = '';
+                        var error_lname = '';
+                        checkType();
+                        checkType2();
+
+                        $('#fname-error').hide();
+                        $('#lname-error').hide();
+                        $('#type-error').hide();
+
+                        $('#type').change(() => {
+                              checkType();
+                        });
+                        $('#fname').focusout(() => {
+                              checkFirstName();
+                        });
+                        $('#lname').focusout(() => {
+                              checkLastName();
+                        });
+
+                        function checkLastName() {
+                              var pattern = /^[a-zA-Z]*$/;
+                              var firstname = $('#lname').val();
+                              console.log(firstname);
+                              if (pattern.test(firstname) && (firstname !== '')) {
+                                    $('#lname-error').hide();
+                                    $('#lname').css({ "border": "2px solid #00ff00" });
+                                    $('input[type=text]').val(function () {
+                                          return this.value.toUpperCase();
+                                    });
+                              } else {
+                                    $('#lname-error').show().html("Should contain only characters!");
+                                    error_lname = 'true';
+                              };
+                        };
+
+                        function checkFirstName() {
+                              var pattern = /^[a-zA-Z]*$/;
+                              var firstname = $('#fname').val();
+                              console.log(firstname);
+                              if (pattern.test(firstname) && (firstname !== '')) {
+                                    $('#fname-error').hide();
+                                    $('#fname').css({ "border": "2px solid #00ff00" });
+                                    $('input[type=text]').val(function () {
+                                          return this.value.toUpperCase();
+                                    });
+                              } else {
+                                    $('#fname-error').show().html("Should contain only characters!");
+                                    error_fname = 'true';
+                              };
+                        };
+
+                        function checkType() {
+                              var pattern_type = /java|javascript2|bootstrap/;
+                              var type = $('#type').val();
+                              if (pattern_type.test(type)) {
+                                    $('#type-error').hide();
+                                    $('#type').css({ "color": "green" });
+                              } else {
+                                    $('#type-error').show().html("Please pick a Course!");
+                                    $('#type').css({ "color": "red" });
+                                    error_type = true;
+                              };
+                        };
+
+                        //Edit Form functions
+
+                        var error_type2 = '';
+                        var error_fname2 = '';
+                        var error_lname2 = '';
+
+                        $('#fname-error2').hide();
+                        $('#lname-error2').hide();
+                        $('#type-error2').hide();
+
+                        $('#type2').change(() => {
+                              checkType2();
+                        });
+                        $('#fname2').focusout(() => {
+                              checkFirstName2();
+                        });
+                        $('#lname2').focusout(() => {
+                              checkLastName2();
+                        });
+
+                        function checkLastName2() {
+                              var pattern = /^[a-zA-Z]*$/;
+                              var firstname = $('#lname2').val();
+                              console.log(firstname);
+                              if (pattern.test(firstname) && (firstname !== '')) {
+                                    $('#lname-error2').hide();
+                                    $('#lname2').css({ "border": "2px solid #00ff00" });
+                                    $('input[type=text]').val(function () {
+                                          return this.value.toUpperCase();
+                                    });
+                              } else {
+                                    $('#lname-error2').show().html("Should contain only characters!");
+                                    error_lname2 = 'true';
+                              };
+                        };
+
+                        function checkFirstName2() {
+                              var pattern = /^[a-zA-Z]*$/;
+                              var firstname = $('#fname2').val();
+                              console.log(firstname);
+                              if (pattern.test(firstname) && (firstname !== '')) {
+                                    $('#fname-error2').hide();
+                                    $('#fname2').css({ "border": "2px solid #00ff00" });
+                                    $('input[type=text]').val(function () {
+                                          return this.value.toUpperCase();
+                                    });
+                              } else {
+                                    $('#fname-error2').show().html("Should contain only characters!");
+                                    error_fname2 = 'true';
+                              };
+                        };
+
+                        function checkType2() {
+                              var pattern_type = /java|javascript|bootstrap/;
+                              var type = $('#type2').val();
+                              if (pattern_type.test(type)) {
+                                    $('#type-error2').hide();
+                                    $('#type2').css({ "color": "green" });
+                              } else {
+                                    $('#type-error2').show().html("Please pick a Course!");
+                                    $('#type2').css({ "color": "red" });
+                                    error_type2 = true;
+                              };
+                        };
+
+
+                  });
+            </script>
+</body>
+
+</html>
