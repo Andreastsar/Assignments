@@ -5,7 +5,7 @@
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Assignments Per Course</title>
+      <title>Assignments/Student/Course</title>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
@@ -61,14 +61,14 @@
             <!--End of Navigation Bar-->
 
             <div class="jumbotron text-center" id="register">
-                  <h3>Assignments Per Course</h3>
+                  <h3>Welcome students! Choose your Assignment for your Course!</h3>
             </div><br />
 
             <div class="row">
                   <div class="col-lg-5 offset-lg-1 my-5">
-                        <p class="bg-warning"><strong>Please choose your Assignment:</strong></strong></p>
+                        <p class="bg-warning"><strong>Please choose your Assignment : (*Required*)</strong></strong></p>
                         <form action="">
-                              <label for="type">Course : </label>
+                              <label for="type"><strong>*</strong> Course : </label>
                               <select name="type" id="type" required>
                                     <option value="pick">Pick a Course</option>
                                     <option value="java">Java</option>
@@ -76,7 +76,7 @@
                                     <option value="bootstrap">Bootstrap</option>
                               </select>
                               <div class="form-group" id="java-hidden">
-                                    <label for="java-type">Assignment : </label>
+                                    <label for="java-type"><strong>*</strong> Assignment : </label>
                                     <select name="java-type" id="java-type" required>
                                           <option value="pick">Pick an Assignment</option>
                                           <option value="javaPart">Java Part-time</option>
@@ -84,7 +84,7 @@
                                     </select>
                               </div>
                               <div class="form-group" id="js-hidden">
-                                    <label for="js-type">Assignment : </label>
+                                    <label for="js-type"><strong>*</strong> Assignment : </label>
                                     <select name="js-type" id="js-type" required>
                                           <option value="pick">Pick an Assignment</option>
                                           <option value="jsPart">JavaScript Part-time</option>
@@ -92,7 +92,7 @@
                                     </select>
                               </div>
                               <div class="form-group" id="bootstrap-hidden">
-                                    <label for="bootstrap-type">Assignment : </label>
+                                    <label for="bootstrap-type"><strong>*</strong> Assignment : </label>
                                     <select name="bootstrap-type" id="bootstrap-type" required>
                                           <option value="pick">Pick an Assignment</option>
                                           <option value="bootstrapPart">Bootstrap Part-time</option>
@@ -105,51 +105,51 @@
                                     <input type="date" class="form-control" id="date-of-submit" name="date-of-submit">
                               </div>
                               <div class="form-group">
-                                    <label for="oralMark">Oral Mark : </label>
-                                    <input type="text" class="form-control" name="oralMark" id="oralMark" min="1"
+                                    <label for="fname"><strong>*</strong> First Name : </label>
+                                    <input type="text" class="form-control" name="fname" id="fname" min="1"
                                           max="30" required><br />
-                                    <div class="alert alert-danger" id="oral-error">Success or Failure</div>
+                                    <div class="alert alert-danger" id="fname-error">Success or Failure</div>
                               </div>
                               <div class="form-group">
-                                    <label for="totalMark">Total Mark : </label>
-                                    <input type="text" class="form-control" name="totalMark" id="totalMark" min="1"
-                                          max="70" required><br />
-                                    <div class="alert alert-danger" id="total-error">Success or Failure</div>
+                                    <label for="lname"><strong>*</strong> Last Name : </label>
+                                    <input type="text" class="form-control" name="lname" id="lname" required><br />
+                                    <div class="alert alert-danger" id="lname-error">Success or Failure</div>
                               </div>
                         </form>
                         <button type="submit" class="btn btn-warning">Add</button>
                   </div>
 
                   <!--Edit Form-->
+                  
                   <div class="col-lg-5 my-5">
-                        <p class="bg-warning"><strong>Please choose your Assignment:</strong></strong></p>
+                        <p class="bg-warning"><strong>Please choose your Assignment : (*Required*)</strong></strong></p>
                         <form action="">
-                              <label for="type">Course : </label>
-                              <select name="type" id="type2" required>
+                              <label for="type2"><strong>*</strong> Course : </label>
+                              <select name="type2" id="type2" required>
                                     <option value="pick">Pick a Course</option>
                                     <option value="java">Java</option>
-                                    <option value="javascript">JavaScript</option>
-                                    <option value="bootstrap2">Bootstrap</option>
+                                    <option value="javascript2">JavaScript</option>
+                                    <option value="bootstrap">Bootstrap</option>
                               </select>
                               <div class="form-group" id="java-hidden2">
-                                    <label for="java-type">Assignment : </label>
-                                    <select name="java-type" id="java-type2" required>
+                                    <label for="java-type2"><strong>*</strong> Assignment : </label>
+                                    <select name="java-type2" id="java-type2" required>
                                           <option value="pick">Pick an Assignment</option>
                                           <option value="javaPart">Java Part-time</option>
                                           <option value="javaFull">Java Full-time</option>
                                     </select>
                               </div>
                               <div class="form-group" id="js-hidden2">
-                                    <label for="js-type">Assignment : </label>
-                                    <select name="js-type" id="js-type2" required>
+                                    <label for="js-type2"><strong>*</strong> Assignment : </label>
+                                    <select name="js-type2" id="js-type2" required>
                                           <option value="pick">Pick an Assignment</option>
                                           <option value="jsPart">JavaScript Part-time</option>
-                                          <option value="jsFull">JavaScript Full-time</option>
+                                          <option value="jsFull2">JavaScript Full-time</option>
                                     </select>
                               </div>
                               <div class="form-group" id="bootstrap-hidden2">
-                                    <label for="bootstrap-type">Assignment : </label>
-                                    <select name="bootstrap-type" id="bootstrap-type2" required>
+                                    <label for="bootstrap-type2"><strong>*</strong> Assignment : </label>
+                                    <select name="bootstrap-type2" id="bootstrap-type2" required>
                                           <option value="pick">Pick an Assignment</option>
                                           <option value="bootstrapPart">Bootstrap Part-time</option>
                                           <option value="bootstrapFull">Bootstrap Full-time</option>
@@ -157,21 +157,18 @@
                               </div>
                               <div class="alert alert-danger" id="type-error2">Success or Failure</div>
                               <div class="form-group">
-                                    <label for="date-of-submit">Date of Submission:</label>
-                                    <input type="date" class="form-control" id="date-of-submit2" name="date-of-submit"
-                                          value="2022-09-23">
+                                    <label for="date-of-submit2">Date of Submission:</label>
+                                    <input type="date" class="form-control" id="date-of-submit2" name="date-of-submit2" value="2022-09-28">
                               </div>
                               <div class="form-group">
-                                    <label for="oralMark">Oral Mark : </label>
-                                    <input type="text" class="form-control" name="oralMark" id="oralMark2" min="1"
-                                          max="30" value="18" required><br />
-                                    <div class="alert alert-danger" id="oral-error2">Success or Failure</div>
+                                    <label for="fname2"><strong>*</strong> First Name : </label>
+                                    <input type="text" class="form-control" name="fname2" id="fname2" value="Nick" required><br />
+                                    <div class="alert alert-danger" id="fname-error2">Success or Failure</div>
                               </div>
                               <div class="form-group">
-                                    <label for="totalMark">Total Mark : </label>
-                                    <input type="text" class="form-control" name="totalMark" id="totalMark2" min="1"
-                                          max="70" value="65" required><br />
-                                    <div class="alert alert-danger" id="total-error2">Success or Failure</div>
+                                    <label for="lname2"><strong>*</strong> Last Name : </label>
+                                    <input type="text" class="form-control" name="lname2" id="lname2" value="Tsouranis" required><br />
+                                    <div class="alert alert-danger" id="lname-error2">Success or Failure</div>
                               </div>
                         </form>
                         <button type="submit" class="btn btn-warning">Edit</button>
@@ -185,17 +182,18 @@
 
             <script>
                   $(document).ready(function () {
-
+                        checkType();
+                        checkType2();
                         var error_type = '';
                         var error_ass = '';
-                        var error_oral = '';
-                        var error_total = '';
+                        var error_fname = '';
+                        var error_lname = '';
                         $('#java-hidden').hide();
                         $('#js-hidden').hide();
                         $('#bootstrap-hidden').hide();
                         $('#type-error').hide();
-                        $('#oral-error').hide();
-                        $('#total-error').hide();
+                        $('#fname-error').hide();
+                        $('#lname-error').hide();
 
                         $('#type').change(function () {
                               checkType();
@@ -209,45 +207,45 @@
                         $('#bootstrap-type').change(function () {
                               checkBootsType();
                         });
-                        $('#oralMark').focusout(() => {
-                              checkOralMark();
+                        $('#fname').focusout(() => {
+                              checkFirstName();
                         });
-                        $('#totalMark').focusout(() => {
-                              checkTotalMark();
+                        $('#lname').focusout(() => {
+                              checkLastName();
                         });
 
-                        function checkTotalMark() {
-                              var pattern = /[0-9]/;
-                              var total = $('#totalMark').val();
-                              console.log(total);
-                              if (pattern.test(total) && (total <= 70)) {
-                                    $('#total-error').hide();
-                                    $('#totalMark').css({ "border": "2px solid #00ff00" });
-                                    $('input[type=number]').val(function () {
-                                          return this.value;
+                        function checkLastName() {
+                              var pattern = /^[a-zA-Z]*$/;
+                              var firstname = $('#lname').val();
+                              console.log(firstname);
+                              if (pattern.test(firstname) && (firstname !== '')) {
+                                    $('#lname-error').hide();
+                                    $('#lname').css({ "border": "2px solid #00ff00" });
+                                    $('input[type=text]').val(function () {
+                                          return this.value.toUpperCase();
                                     });
                               } else {
-                                    $('#total-error').show().html("Should contain Grade: 1-70 !");
-                                    error_total = 'true';
+                                    $('#lname-error').show().html("Should contain only characters!");
+                                    error_lname = 'true';
                               };
                         };
 
-                        function checkOralMark() {
-                              var pattern = /[0-9]/;
-                              var oral = $('#oralMark').val();
-                              console.log(oral);
-                              if (pattern.test(oral) && (oral <= 30)) {
-                                    $('#oral-error').hide();
-                                    $('#oralMark').css({ "border": "2px solid #00ff00" });
-                                    $('input[type=number]').val(function () {
-                                          return this.value;
+                        function checkFirstName() {
+                              var pattern = /^[a-zA-Z]*$/;
+                              var firstname = $('#fname').val();
+                              console.log(firstname);
+                              if (pattern.test(firstname) && (firstname !== '')) {
+                                    $('#fname-error').hide();
+                                    $('#fname').css({ "border": "2px solid #00ff00" });
+                                    $('input[type=text]').val(function () {
+                                          return this.value.toUpperCase();
                                     });
                               } else {
-                                    $('#oral-error').show().html("Should contain Grade: 1-30 !");
-                                    error_oral = 'true';
+                                    $('#fname-error').show().html("Should contain only characters!");
+                                    error_fname = 'true';
                               };
                         };
-
+                        
                         function checkBootsType() {
                               var pattern = /bootstrapPart|bootstrapFull/;
                               var type = $('#bootstrap-type').val();
@@ -317,20 +315,19 @@
                               };
                         };
 
-                        //Edit Form Functions
+                        //Edit form functions
+                        $('option[value="jsFull2"]').attr('selected', 'selected');
+                        $('option[value="javascript2"]').attr('selected', 'selected');
 
-                        $('option[value="bootstrap2"]').attr('selected', 'selected');
                         var error_type2 = '';
                         var error_ass2 = '';
-                        var error_oral2 = '';
-                        var error_total2 = '';
-
+                        var error_fname2 = '';
+                        var error_lname2 = '';
                         $('#java-hidden2').hide();
-                        $('#js-hidden2').hide();
                         $('#bootstrap-hidden2').hide();
                         $('#type-error2').hide();
-                        $('#oral-error2').hide();
-                        $('#total-error2').hide();
+                        $('#fname-error2').hide();
+                        $('#lname-error2').hide();
 
                         $('#type2').change(function () {
                               checkType2();
@@ -344,52 +341,52 @@
                         $('#bootstrap-type2').change(function () {
                               checkBootsType2();
                         });
-                        $('#oralMark2').focusout(() => {
-                              checkOralMark2();
+                        $('#fname2').focusout(() => {
+                              checkFirstName2();
                         });
-                        $('#totalMark2').focusout(() => {
-                              checkTotalMark2();
+                        $('#lname2').focusout(() => {
+                              checkLastName2();
                         });
 
-                        function checkTotalMark2() {
-                              var pattern = /[0-9]/;
-                              var total = $('#totalMark2').val();
-                              console.log(total);
-                              if (pattern.test(total) && (total <= 70)) {
-                                    $('#total-error2').hide();
-                                    $('#totalMark2').css({ "border": "2px solid #00ff00" });
-                                    $('input[type=number]').val(function () {
-                                          return this.value;
+                        function checkLastName2() {
+                              var pattern = /^[a-zA-Z]*$/;
+                              var firstname = $('#lname2').val();
+                              console.log(firstname);
+                              if (pattern.test(firstname) && (firstname !== '')) {
+                                    $('#lname-error2').hide();
+                                    $('#lname2').css({ "border": "2px solid #00ff00" });
+                                    $('input[type=text]').val(function () {
+                                          return this.value.toUpperCase();
                                     });
                               } else {
-                                    $('#total-error2').show().html("Should contain Grade: 1-70 !");
-                                    error_total2 = 'true';
+                                    $('#lname-error2').show().html("Should contain only characters!");
+                                    error_lname2 = 'true';
                               };
                         };
 
-                        function checkOralMark2() {
-                              var pattern = /[0-9]/;
-                              var oral = $('#oralMark2').val();
-                              console.log(oral);
-                              if (pattern.test(oral) && (oral <= 30)) {
-                                    $('#oral-error2').hide();
-                                    $('#oralMark2').css({ "border": "2px solid #00ff00" });
-                                    $('input[type=number]').val(function () {
-                                          return this.value;
+                        function checkFirstName2() {
+                              var pattern = /^[a-zA-Z]*$/;
+                              var firstname = $('#fname2').val();
+                              console.log(firstname);
+                              if (pattern.test(firstname) && (firstname !== '')) {
+                                    $('#fname-error2').hide();
+                                    $('#fname2').css({ "border": "2px solid #00ff00" });
+                                    $('input[type=text]').val(function () {
+                                          return this.value.toUpperCase();
                                     });
                               } else {
-                                    $('#oral-error2').show().html("Should contain Grade: 1-30 !");
-                                    error_oral2 = 'true';
+                                    $('#fname-error2').show().html("Should contain only characters!");
+                                    error_fname2 = 'true';
                               };
                         };
-
+                        
                         function checkBootsType2() {
                               var pattern = /bootstrapPart|bootstrapFull/;
                               var type = $('#bootstrap-type2').val();
                               if (pattern.test(type)) {
                                     $('#type-error2').hide();
                                     $('#bootstrap-type2').css({ "color": "green" });
-                                    
+                                    return this.value;
                               } else {
                                     $('#type-error2').show().html("Please select an Assignment!");
                                     $('#bootstrap-type2').css({ "color": "red" });
@@ -426,7 +423,7 @@
                         };
 
                         function checkType2() {
-                              var pattern_type = /java|javascript|bootstrap2/;
+                              var pattern_type = /java|javascript2|bootstrap/;
                               var type = $('#type2').val();
                               if (pattern_type.test(type)) {
                                     $('#type-error2').hide();
@@ -436,7 +433,7 @@
                                           $('#js-hidden2').hide();
                                           $('#bootstrap-hidden2').hide();
                                     }
-                                    else if (type === "javascript") {
+                                    else if (type === "javascript2") {
                                           $('#java-hidden2').hide();
                                           $('#js-hidden2').show();
                                           $('#bootstrap-hidden2').hide();
