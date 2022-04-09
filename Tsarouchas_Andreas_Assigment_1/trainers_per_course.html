@@ -11,6 +11,7 @@
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
             crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -160,16 +161,19 @@
 
                               <div class="form-group">
                                     <label for="date-of-submit2">Date of Register:</label>
-                                    <input type="date" class="form-control" id="date-of-submit2" name="date-of-submit2" value="2006-12-13">
+                                    <input type="date" class="form-control" id="date-of-submit2" name="date-of-submit2"
+                                          value="2006-12-13">
                               </div>
                               <div class="form-group">
                                     <label for="fname2"><strong>*</strong> First Name : </label>
-                                    <input type="text" class="form-control" name="fname2" id="fname2" value="Andreas" required><br />
+                                    <input type="text" class="form-control" name="fname2" id="fname2" value="Andreas"
+                                          required><br />
                                     <div class="alert alert-danger" id="fname-error2">Success or Failure</div>
                               </div>
                               <div class="form-group">
                                     <label for="lname2"><strong>*</strong> Last Name : </label>
-                                    <input type="text" class="form-control" name="lname2" id="lname2" value="Tsarouchas" required><br />
+                                    <input type="text" class="form-control" name="lname2" id="lname2" value="Tsarouchas"
+                                          required><br />
                                     <div class="alert alert-danger" id="lname-error2">Success or Failure</div>
                               </div>
                         </form>
@@ -184,7 +188,7 @@
 
             <script>
                   $(document).ready(function () {
-                        
+
                         var error_type = '';
                         var error_fname = '';
                         var error_lname = '';

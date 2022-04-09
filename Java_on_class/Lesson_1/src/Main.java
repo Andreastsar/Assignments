@@ -1,6 +1,3 @@
-import java.util.Arrays;
-import java.util.Random;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -86,16 +83,22 @@ public class Main {
 
 
         // Array with 100 random values
-        int arrayRand[] = new int[100];
-        Random r = new Random();
-        int randomNum;
-        for (int i=0; i < 100; i++) {
-            randomNum = r.nextInt(101);
-            arrayRand[i] = randomNum;
-        }
-        for (int i : arrayRand) {
-            System.out.print(Arrays.toString(arrayRand));           // the Arrays.toString(my_array) displays the values of the array in one line as an actually Array.
-        }
+//        int arrayRand[] = new int[100];
+//        Random r = new Random();
+//        int randomNum;
+//        for (int i=0; i < 100; i++) {
+//            randomNum = r.nextInt(101);
+//            arrayRand[i] = randomNum;
+//        }
+//        for (int i : arrayRand) {
+//            System.out.print(Arrays.toString(arrayRand));           // the Arrays.toString(my_array) displays the values of the array in one line as an actually Array.
+//        }
 
+        // METHOD .startWith() --> checks if something starts with the given char
+        String[] animals = {"cat", "dog", "pig", "bear", "bird", "parrot", "rabbit"};
+        for (int i = 0; i < animals.length; i++) {
+            if (animals[i].startsWith("p")) {continue;}
+            System.out.println(animals[i]);
+        }
     }
 }

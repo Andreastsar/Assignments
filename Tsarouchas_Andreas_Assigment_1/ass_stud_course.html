@@ -11,6 +11,7 @@
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
             crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -102,12 +103,13 @@
                               <div class="alert alert-danger" id="type-error">Success or Failure</div>
                               <div class="form-group">
                                     <label for="date-of-submit">Date of Submission:</label>
-                                    <input type="date" class="form-control" id="date-of-submit" name="date-of-submit">
+                                    <input type="date" class="form-control" id="date-of-submit" name="date-of-submit"
+                                          min="2022-04-11" max="2022-05-11">
                               </div>
                               <div class="form-group">
                                     <label for="fname"><strong>*</strong> First Name : </label>
-                                    <input type="text" class="form-control" name="fname" id="fname" min="1"
-                                          max="30" required><br />
+                                    <input type="text" class="form-control" name="fname" id="fname" min="1" max="30"
+                                          required><br />
                                     <div class="alert alert-danger" id="fname-error">Success or Failure</div>
                               </div>
                               <div class="form-group">
@@ -120,7 +122,7 @@
                   </div>
 
                   <!--Edit Form-->
-                  
+
                   <div class="col-lg-5 my-5">
                         <p class="bg-warning"><strong>Please choose your Assignment : (*Required*)</strong></strong></p>
                         <form action="">
@@ -158,16 +160,19 @@
                               <div class="alert alert-danger" id="type-error2">Success or Failure</div>
                               <div class="form-group">
                                     <label for="date-of-submit2">Date of Submission:</label>
-                                    <input type="date" class="form-control" id="date-of-submit2" name="date-of-submit2" value="2022-09-28">
+                                    <input type="date" class="form-control" id="date-of-submit2" name="date-of-submit2"
+                                          value="2022-04-30" min="2022-04-11" max="2022-05-11">
                               </div>
                               <div class="form-group">
                                     <label for="fname2"><strong>*</strong> First Name : </label>
-                                    <input type="text" class="form-control" name="fname2" id="fname2" value="Nick" required><br />
+                                    <input type="text" class="form-control" name="fname2" id="fname2" value="Nick"
+                                          required><br />
                                     <div class="alert alert-danger" id="fname-error2">Success or Failure</div>
                               </div>
                               <div class="form-group">
                                     <label for="lname2"><strong>*</strong> Last Name : </label>
-                                    <input type="text" class="form-control" name="lname2" id="lname2" value="Tsouranis" required><br />
+                                    <input type="text" class="form-control" name="lname2" id="lname2" value="Tsouranis"
+                                          required><br />
                                     <div class="alert alert-danger" id="lname-error2">Success or Failure</div>
                               </div>
                         </form>
@@ -245,7 +250,7 @@
                                     error_fname = 'true';
                               };
                         };
-                        
+
                         function checkBootsType() {
                               var pattern = /bootstrapPart|bootstrapFull/;
                               var type = $('#bootstrap-type').val();
@@ -379,7 +384,7 @@
                                     error_fname2 = 'true';
                               };
                         };
-                        
+
                         function checkBootsType2() {
                               var pattern = /bootstrapPart|bootstrapFull/;
                               var type = $('#bootstrap-type2').val();

@@ -11,6 +11,8 @@
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
             crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
@@ -66,7 +68,8 @@
 
             <div class="row">
                   <div class="col-lg-5 offset-lg-1 my-5">
-                        <p class="bg-warning"><strong>Please register for your Assignment: (*Required*)</strong></strong></p>
+                        <p class="bg-warning"><strong>Please register for your Assignment:
+                                    (*Required*)</strong></strong></p>
                         <form action="">
                               <label for="title"><strong>*</strong> Title : </label>
                               <input type="text" name="title" id="title" required><br />
@@ -81,7 +84,8 @@
                               <div class="alert alert-danger" id="description-error"></div>
                               <div class="form-group">
                                     <label for="date-of-submit">Date of Submission:</label>
-                                    <input type="date" class="form-control" id="date-of-submit" name="date-of-submit">
+                                    <input type="date" class="form-control" id="date-of-submit" name="date-of-submit"
+                                          min="2022-04-11" max="2022-05-11">
                               </div>
                               <div class="form-group">
                                     <label for="oralMark"><strong>*</strong> Oral Mark (1-30) : </label>
@@ -102,7 +106,8 @@
                   <!--Edit Form-->
 
                   <div class="col-lg-5 my-5">
-                        <p class="bg-warning"><strong>Please register for your Assignment: (*Required*)</strong></strong></p>
+                        <p class="bg-warning"><strong>Please register for your Assignment:
+                                    (*Required*)</strong></strong></p>
                         <form action="">
                               <label for="title"><strong>*</strong> Title : </label>
                               <input type="text" name="title" id="title2" value="CSS" required><br />
@@ -117,7 +122,8 @@
                               <div class="alert alert-danger" id="description-error2"></div>
                               <div class="form-group">
                                     <label for="date-of-submit">Date of Submission:</label>
-                                    <input type="date" class="form-control" id="date-of-submit2" name="date-of-submit" value="2022-09-12">
+                                    <input type="date" class="form-control" id="date-of-submit2" name="date-of-submit"
+                                          value="2022-04-23" min="2022-04-11" max="2022-05-11">
                               </div>
                               <div class="form-group">
                                     <label for="oralMark"><strong>*</strong> Oral Mark (1-30) : </label>
@@ -169,7 +175,7 @@
 
 
                         function checkDescription() {
-                              var pattern = /full|part2/;
+                              var pattern = /full|part/;
                               var type = $('#description').val();
                               if (pattern.test(type)) {
                                     $('#description-error').hide();
@@ -189,7 +195,7 @@
                                     $('#title-error').hide();
                                     $('#title').css({ "border": "2px solid #00ff00" });
                                     return this.value;
-                              }else {
+                              } else {
                                     $('#title-error').show().html("Should contain Java, JS, CSS");
                                     description_error = 'true';
                               }
@@ -273,7 +279,7 @@
                                     $('#title-error2').hide();
                                     $('#title2').css({ "border": "2px solid #00ff00" });
                                     return this.value;
-                              }else {
+                              } else {
                                     $('#title-error2').show().html("Should contain Java, JS, CSS");
                                     description_error2 = 'true';
                               }
