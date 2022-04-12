@@ -3,17 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="091c6462-2270-4ad9-a728-7d82ec176e50" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lesson_1/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lesson_1/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tsarouchas_Andreas_Assigment_1/ass_stud_course.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tsarouchas_Andreas_Assigment_1/ass_stud_course.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tsarouchas_Andreas_Assigment_1/assignments.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tsarouchas_Andreas_Assigment_1/assignments.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tsarouchas_Andreas_Assigment_1/assignments_per_course.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tsarouchas_Andreas_Assigment_1/assignments_per_course.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tsarouchas_Andreas_Assigment_1/courses.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tsarouchas_Andreas_Assigment_1/courses.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tsarouchas_Andreas_Assigment_1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tsarouchas_Andreas_Assigment_1/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tsarouchas_Andreas_Assigment_1/students.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tsarouchas_Andreas_Assigment_1/students.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tsarouchas_Andreas_Assigment_1/students_per_course.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tsarouchas_Andreas_Assigment_1/students_per_course.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tsarouchas_Andreas_Assigment_1/trainers.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tsarouchas_Andreas_Assigment_1/trainers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tsarouchas_Andreas_Assigment_1/trainers_per_course.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tsarouchas_Andreas_Assigment_1/trainers_per_course.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lesson_2/src/lesson_2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lesson_2/src/lesson_2/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
