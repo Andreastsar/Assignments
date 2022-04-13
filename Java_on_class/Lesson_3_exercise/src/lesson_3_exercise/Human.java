@@ -23,5 +23,4 @@ public class Human {
         System.out.println("Country : " + country);
         System.out.println("Date of Birth : " + dateOfBirth);
     }
-
 }

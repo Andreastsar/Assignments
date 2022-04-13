@@ -17,5 +17,4 @@ public class Garden {
         System.out.println("Square Feet : " + squareFeet);
         System.out.println("Monthly cost : " + monthlyCost + " euros.");
     }
-
 }

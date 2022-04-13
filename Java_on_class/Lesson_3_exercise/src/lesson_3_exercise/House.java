@@ -29,7 +29,5 @@ public class House {
         System.out.println("Square Feet : " + squareFeet);
         System.out.println("Number of parking spaces : " + parkingSpaces);
         System.out.println("Date of construction : " + dateOfConstruction);
-
     }
-
 }
