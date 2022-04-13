@@ -22,5 +22,8 @@ public class Main {
         fences[0] = new Fence();
         fences[1] = new Fence(10);
         Garden myGarden2 = new Garden(fences);
+        System.out.println("Garden's name is: " + myGarden2.name);
+        System.out.println("fences[0].length = " + myGarden2.fences[0].length);
+        System.out.println("fences[1].length = " + myGarden2.fences[1].length);
     }
 }
