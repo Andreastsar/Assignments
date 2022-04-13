@@ -19,6 +19,7 @@ public class Main {
         house1.city = "Athens";
         house1.rooms = 4;
         house1.printHouseAttributes();
+        house1.price = 120000;
 
         System.out.println("------------------------------------------------------");
 

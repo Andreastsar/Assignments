@@ -16,6 +16,7 @@ public class House {
     int parkingSpaces;
     Date dateOfConstruction;
     int bathrooms;
+    int price;
 
     public void printHouseAttributes() {
         System.out.println("Street address : " + addressName);
@@ -29,5 +30,6 @@ public class House {
         System.out.println("Square Feet : " + squareFeet);
         System.out.println("Number of parking spaces : " + parkingSpaces);
         System.out.println("Date of construction : " + dateOfConstruction);
+        System.out.println("Price : " + price);
     }
 }

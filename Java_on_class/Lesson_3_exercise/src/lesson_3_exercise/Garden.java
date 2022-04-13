@@ -3,7 +3,7 @@ package lesson_3_exercise;
 public class Garden {
 
     int numberOfSpecies;
-    String type;
+    String type;    // indoor - outdoor
     int squareFeet;
     int numberOfCurrentPlants;
     int numberOfMaxPlants;
