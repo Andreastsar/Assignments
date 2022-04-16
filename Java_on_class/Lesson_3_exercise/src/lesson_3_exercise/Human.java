@@ -6,6 +6,7 @@ public class Human {
 
     String firstName;
     String lastName;
+    String idNumber;
     int age;
     float height;
     float weight;
@@ -16,6 +17,7 @@ public class Human {
     public void printHumanAttributes() {
         System.out.println("First name : " + firstName);
         System.out.println("Last name : " + lastName);
+        System.out.println("ID : " + idNumber);
         System.out.println("Age : " + age);
         System.out.println("Height : " + height);
         System.out.println("Weight : " + weight);

@@ -1,0 +1,2 @@
+Variable instances when used , why they have default value?
+objects when NOT CREATED, not having default values (null)

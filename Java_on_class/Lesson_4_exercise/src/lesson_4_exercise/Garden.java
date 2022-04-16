@@ -16,5 +16,4 @@ public class Garden {
         this.address = address;
         this.fences = fences;
     }
-
 }

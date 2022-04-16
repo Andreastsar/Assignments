@@ -18,8 +18,8 @@ public class Main {
         house1.addressNumber = 44;
         house1.city = "Athens";
         house1.rooms = 4;
-        house1.printHouseAttributes();
         house1.price = 120000;
+        house1.printHouseAttributes();
 
         System.out.println("------------------------------------------------------");
 
@@ -28,6 +28,7 @@ public class Main {
         human1.gender = "Male";
         human1.firstName = "Jason";
         human1.lastName = "Bourne";
+        human1.idNumber = "AN33124";
         human1.weight = 124.5f;
         human1.height = 1.87f;
         human1.country = "Spain";

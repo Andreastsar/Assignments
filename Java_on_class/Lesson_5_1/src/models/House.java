@@ -11,8 +11,8 @@ public class House {
     public House() {
         rooms = new Room[3];
         rooms[0] = new Room();
-        rooms[1] = new Room("kitchen");
-        rooms[2] = new Room("bathroom");
+        rooms[1] = new Room("Unknown");
+        rooms[2] = new Room("Unknown");
         this.name = "John's House";
     }
 

@@ -10,7 +10,7 @@ public class Room {
     public Room() {
         name = "Living Room";
         door = new Door("Living room's door");
-        window = new Window("Living room's window");
+        window = new Window("Default window");
     }
 
     public Room(String name) {

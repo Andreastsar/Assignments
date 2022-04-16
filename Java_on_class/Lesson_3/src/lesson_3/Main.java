@@ -18,6 +18,13 @@ public class Main {
         car.maxSpeed = 510;
         car.name = "I don't exist";
         car.yearOfProduction = new Date("2047/01/01");
-        System.out.println("car = " + car.name);
+        System.out.println("car = " + car.name + " , max speed = " + car.maxSpeed + " , made in : " + car.yearOfProduction);
+
+        Car myNewCar = new Car();
+        myNewCar.hp = 90;
+        myNewCar.maxSpeed = 110;
+        myNewCar.name = "Audi";
+        myNewCar.yearOfProduction = new Date("2047/01/01");
+        System.out.println("car = " + myNewCar.name + " , max speed = " + myNewCar.maxSpeed + " , made in : " + myNewCar.yearOfProduction);
     }
 }

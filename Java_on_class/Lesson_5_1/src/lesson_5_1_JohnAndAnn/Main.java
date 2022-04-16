@@ -14,7 +14,7 @@ public class Main {
 	    John decides to open the door that leads to the garden.
 	    Ann runs to the garden.
 	 */
-        // Create an application that does the above!
+        // Create an application that does the above! (That is before getter-setter and access Modifiers)
 
         // Step 1: Possible Classes ---> House, Human, Animal/cat, Garden, Room, Actions?, Door, Window
 

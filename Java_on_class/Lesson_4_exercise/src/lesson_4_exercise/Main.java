@@ -12,6 +12,8 @@ public class Main {
 
         Garden myGarden1 = new Garden();
 
+        System.out.println("---------------------------------------------------------------");
+
         Fence[] fences = new Fence[2];
         fences[0] = new Fence();
         fences[1] = new Fence(10);
@@ -19,6 +21,5 @@ public class Main {
 
         System.out.println("My Garden 2 - Square meters: " + myGarden2.squareMeters + ", Address: " + myGarden2.address +
                 ", fence[0].length = " + myGarden2.fences[0].length + ", fence[1].length = " + myGarden2.fences[1].length);
-
     }
 }
