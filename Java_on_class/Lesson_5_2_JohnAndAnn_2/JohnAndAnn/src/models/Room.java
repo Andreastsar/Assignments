@@ -13,6 +13,9 @@ public class Room {
     private Door door;
     private Window window;
     private boolean isLivingRoom;
+    private Human human;
+    private Animal animal;
+
 
     public Room() {
         this.name = "No Name";
@@ -77,16 +80,34 @@ public class Room {
         this.window = window;
     }
 
+    public Human getHuman() {
+        return human;
+    }
+
+    public void setHuman(Human human) {
+        this.human = human;
+    }
+
+    public Animal getAnimal() {
+        return animal;
+    }
+
+    public void setAnimal(Animal animal) {
+        this.animal = animal;
+    }
+
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("Room{");
-        sb.append("name=").append(name);
+        final StringBuilder sb = new StringBuilder("Room{");
+        sb.append("name='").append(name).append('\'');
         sb.append(", door=").append(door);
         sb.append(", window=").append(window);
+        sb.append(", isLivingRoom=").append(isLivingRoom);
+        if(human != null) {
+            sb.append(", human=").append(human);
+        }
+        sb.append(", animal=").append(animal);
         sb.append('}');
         return sb.toString();
     }
-
-
 }
