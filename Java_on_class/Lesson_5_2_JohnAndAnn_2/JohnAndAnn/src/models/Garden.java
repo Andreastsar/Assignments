@@ -3,8 +3,6 @@ package models;
 public class Garden {
     private String name;
     private Door door;
-    private Animal animal;
-
 
     public Garden() {
     }

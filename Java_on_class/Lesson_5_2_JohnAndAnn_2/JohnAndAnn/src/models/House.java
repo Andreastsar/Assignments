@@ -30,14 +30,22 @@ public class House {
         rooms = new Room[3];    // this is what we created with this line ---> int[] array = new int[3];
 
         Door livingRoomDoor = new Door("Living Room / Garden");
-        Human johnHuman = new Human("John");
+
+        //Creating the objects Human John and Animal Ann INSIDE THE HOUSE
+        Human john = new Human("John");
         Animal ann = new Animal("Ann");
+
+        // Setting John and Ann inside the HOUSE
         this.setAnimal(ann);
-        this.setHuman(johnHuman);
+        this.setHuman(john);
+
+
         garden = new Garden("My Garden", livingRoomDoor);
 
         rooms[0] = new Room("Living Room", livingRoomDoor, new Window(), true);
-        rooms[0].setHuman(johnHuman);
+
+        //// Setting John and Ann inside the rooms[0]
+        rooms[0].setHuman(john);
         rooms[0].setAnimal(ann);
 //        rooms[0].setName("Living Room");
 
