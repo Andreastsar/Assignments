@@ -2,7 +2,7 @@ import models.Student;
 
 import java.util.HashSet;
 
-public class Main2 {
+public class Main_Student_HashSet {
     public static void main(String[] args) {
 
         HashSet<Student> studentHashSet = new HashSet<>();
